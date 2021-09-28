@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '05-shop-cart.jpg'
+
+block title
+	- let  title= 'Корзина'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	//- +headerBlock()
+	+mob-mnu()
+	+header()
+	+page-body05('btns',title, 'Корзина')
+		+shop-content()
+		+shop-form
+	//- +sContact()
+	+footer()
+

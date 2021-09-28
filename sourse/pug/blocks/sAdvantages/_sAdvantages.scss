@@ -1,0 +1,52 @@
+// start .sAdvantages
+.sAdvantages {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	background-color: $light;
+	.section-title {
+		h2 {
+			font-weight: bold;
+		}
+	}
+	.row{
+		// --bs-gutter-x: #{rem(12)};
+		// @include media-breakpoint-up(md) {
+		// 	--bs-gutter-x: #{rem(24)};
+		// }
+		// @include media-breakpoint-up(lg) {
+		// 	--bs-gutter-x: #{rem(16)};
+		// }
+		// @include media-breakpoint-up(xl) {
+		// 	--bs-gutter-x: #{rem(20)};
+		// }
+		--bs-gutter-y: #{rem(60)};	
+		justify-content: center;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(md) {
+	}
+} // end.sAdvantages
+
+.adv-item{
+	text-align: center;
+	&__title{
+		word-wrap:break-word;
+		@include media-breakpoint-up(md) {
+			word-wrap:normal;
+		}
+	}
+	&__img-wrap{
+		.res-i{
+			width:rem(70);
+			margin-bottom: rem(20);
+		}
+	}
+}
+// .res-i{
+// 	width:rem(70);
+// 	margin-bottom: rem(20);
+// }
