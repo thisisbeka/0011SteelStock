@@ -61,7 +61,7 @@ $grays: ("100": $gray-100,
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue: #2A8AEA;  
+$blue: #3992D3;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -248,7 +248,7 @@ $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px) !default;
+  xxl: 1324px) !default;
 // scss-docs-end container-max-widths
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -371,7 +371,7 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: rem(48)  ;
+$h1-font-size: rem(48);
 $h2-font-size: rem(40);
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: rem(24) !default;

@@ -1,10 +1,20 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+pic(`header-block.jpg`,`bg`, ``).picture-bg
 		.container
 			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
+				h1 Металлопрокат в&nbsp;розницу и&nbsp;оптом в&nbsp;Нижнем Новгороде
+				p В нашем каталоге самые разнообразные металлы, которые помогут вам решить любые производственные задачи
 			.row
-						
+				mixin adv-item(s,t)
+					.col-6.col-md-3
+						+b.adv-item
+							+e.img-wrap
+								img.res-i(src=`img/svg/advantages-${s}.svg`, loading='lazy' alt="")
+							+e.title!=t
+				+adv-item('1',`Широкий ассортимент различного вида металлопроката и&nbsp;услуг`)
+				+adv-item('2','Доставка товара на&nbsp;Ваш объект точно в&nbsp;срок')
+				+adv-item('3','Вся продукция сертифицирована и&nbsp;соответствует ГОСТу')
+				+adv-item('4','Комплексные поставки')
 	// end headerBlock

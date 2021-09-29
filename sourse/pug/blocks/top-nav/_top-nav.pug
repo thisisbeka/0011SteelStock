@@ -11,24 +11,18 @@ mixin mob-mnu()
 	+b.menu-mobile--js.d-lg-none 
 		+e.inner
 			+search
-			+b.city-link(href="#modal-search-list").link-modal-js 
-				+icon("compass")
-				| Набережные Челны
+			//- +b.city-link(href="#modal-search-list").link-modal-js 
+			//- 	+icon("compass")
+			//- 	| Набережные Челны
 			+mnu()
 			+b.header
 				+e.tel-block.col-lg-auto
-					+e.link-tel(href="tel:8(800)700-85-72") 8 (800) 700-85-72
-				+e.tel-block.col-lg-auto
-					+tel-n-social('8(960)079-95-44','8 (960) 079-95-44 ')
+					+tel-n-social('tel:+79308067121','+7 (930) 806-71-21')
 				div
-					a.link-modal-js(href="#modal-request").fw-600 Заказать звонок
-				+e.link-email(href="mailto:zapchasty-kama@yandex.ru") zapchasty-kama@yandex.ru
-				+e.addr г. Набережные Челны, <br> пр-т КАМАЗа, 22/3
-				+e.time Пн-пт: с 8:00 до 17:00 мск
-					br
-					| Сб: с 8:00 до 12:00 мск
-					br
-					| Вс: выходной
+					a.link-modal-js.text-primary(href="#modal-request").fw-600 Заказать звонок
+				+e.link-email(href="mailto:skladstali@mail.ru") skladstali@mail.ru
+				+e.addr г. Нижний Новгород, <br> ул. Вторчермета д.&nbsp;1, оф.&nbsp;113
+				
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

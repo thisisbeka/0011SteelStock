@@ -3,36 +3,45 @@ mixin header()
 	+b.HEADER.header#header&attributes(attributes)
 		.container
 			.row
-				.col-lg-auto.col
-					a(href="/")
-						img(src="img/svg/logo-head.svg", alt="") 
-				.col.d-none.d-lg-block
-					+b.city-link(href="#modal-search-list").link-modal-js 
-						+icon("compass")
-						| Набережные Челны
+				.col.d-xl-none
+					+e.A.logo(href="/")
+						img(src="img/svg/logo-head.svg" alt="") 
+				.col.d-none.d-xl-block
+					+e.adress г. Нижний Новгород, ул. Вторчермета д.&nbsp;1, оф.&nbsp;113
 				+e.col.col-lg-auto.order-lg-0.order-last
 					+e.contact-dropdown--js.d-lg-block
 						.container
 							.row
-								.col-auto.order-xl-0.order-last.d-none.d-lg-block
-									+e.link-email(href="mailto:zapchasty-kama@yandex.ru") zapchasty-kama@yandex.ru
-								+e.tel-block.col-lg-auto
-									+e.link-tel(href="tel:8(800)700-85-72") 8 (800) 700-85-72
-								+e.tel-block.col-lg-auto
-									+e.link-tel(href="tel:8(960)079-95-44") 8 (960) 079-95-44
-								.col-12.d-xl-none
-								.col-lg-auto.order-last
-									+tel-n-social
-				//- .col-auto
+								.col-auto.d-none.d-xxl-block
+									+e.link-email(href="mailto:skladstali@mail.ru") skladstali@mail.ru
+								.col
+									+b.soc
+										+item-sos().--telegram
+											img.d-none.d-lg-block(src="img/svg/telegtam-2.svg" alt="")
+											img.d-block.d-lg-none(src="img/svg/telegtam.svg" alt="")
+											span Telegtam
+										+item-sos().--viber
+											img.d-none.d-lg-block(src="img/svg/whatsapp-2.svg" alt="")
+											img.d-block.d-lg-none(src="img/svg/whatsapp.svg" alt="")
+											span WhatsApp
+										+item-sos().--whatsapp
+											img.d-none.d-lg-block(src="img/svg/viber-2.svg" alt="")
+											img.d-block.d-lg-none(src="img/svg/viber.svg" alt="")
+											span Viber
+								+e.tel-block.col-lg-auto.order-first.order-lg-4
+									+e.link-tel(href="tel:+79308067121") +7 (930) 806-71-21
+								.col-lg-auto.d-none.d-lg-block.order-lg-5
+									+e.btn.btn.btn-primary(href="#") Заказать звонок
+
 				.col-12.d-none.d-lg-block
+
+				.col-lg-auto.col.d-none.d-xl-block
+					+e.A.logo(href="/")
+						img(src="img/svg/logo-head.svg" alt="") 
 				.col.d-none.d-lg-block
 					+mnu
 				.col-auto.d-none.d-lg-block
 					+search
-				.col-auto
-					+b.basket-btn(href="#")
-						+icon("basket")
-						+e.count 99
 				.col-auto.d-lg-none
 					+b.toggle-contact-mobile--js.btn.btn-primary
 						+icon("call")

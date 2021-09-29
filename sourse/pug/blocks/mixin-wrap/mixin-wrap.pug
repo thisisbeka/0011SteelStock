@@ -268,9 +268,9 @@ mixin page404(t)
 mixin search()
 	+b.search-block
 		form
+			input(type="text" placeholder="Начать поиск по товарам")
 			button
 				+icon("search-icon")
-			input(type="text" placeholder="Поиск по артикулу и названию")
 
 mixin page-body06(btns,t, ...items)
 	.container.container--main
