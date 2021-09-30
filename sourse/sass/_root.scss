@@ -8,13 +8,18 @@
 	}
 	--fontSizeBase: 18px;
 	--sTPB: #{rem(60)};
-	--sPT: #{rem(80)};
-	--sPB: #{rem(80)};
+	--sPT: #{rem(70)};
+	--sPB: #{rem(70)};
+
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(80)};
+	}
 
 	@include media-breakpoint-up(xl) {
-		--sPT: #{rem(100)};
-		--sPB: #{rem(100)};
-		color: rgba($color: #000000, $alpha: 1.0)
+		// --sPT: #{rem(100)};
+		// --sPB: #{rem(100)};
+		color: rgba($color: #000000, $alpha: 1);
 	}
 
 	--swiperArrowSize: #{rem(50)};
@@ -45,8 +50,6 @@
 
 	--header-height: 79px;
 }
-
-
 
 @include media-breakpoint-up(xl) {
 }

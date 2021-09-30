@@ -31,13 +31,13 @@ mixin category-item(i, t)
 				+e.title!= t
 				+e.amount.text-secondary 198 товаров
 
-mixin card-item(bg,t)
-	.col-6.col-md-4.col-lg-3
+mixin card-item(bg, t, q)
+	.col-6.col-lg-3
 		+b.card-item.bg-wrap(href='#')
 			+pic(`catalog-${bg}.png`,"bg",0).picture-bg
 			+e.caption
-				+e.title!= (t || "Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)")
-				+e.price.h5='385 000 ₽'
+				+e.title!= t
+				+e.quantity!= q
 				+e.btn-wrap
 					+e.btn.btn-js Подробнее
 
@@ -94,7 +94,7 @@ mixin page-head(btns,t, ...items)
 				if btns
 					.col-auto
 						block
-						
+
 //list-group-item.list-group-item-action(href='#')
 mixin page-body(btns,t, ...items)
 	.container.container--main
@@ -324,7 +324,7 @@ mixin sContactInfo(data)
 					li г. Набережные Челны, пр&minus;т&nbsp;КАМАЗа, 22/3
 				+item('4',`Режим работы`)
 					li Пн-пт: с 8:00 до 17:00 мск <br> Сб: с 8:00 до 12:00 мск <br> Вс: выходной
-				
+
 
 mixin contacts-page()
 	+b.contacts-page&attributes(attributes)
@@ -411,8 +411,8 @@ mixin delivery-page()
 				+e.methods-title Способы оплаты
 				+e.methods-text Оплата осуществляется наличным или безналичным расчетом с&nbsp;НДС.
 				a.pdf-btns(href="#")
-						img(src="img/svg/pdf.svg")
-						span Реквизиты организации
+					img(src="img/svg/pdf.svg")
+					span Реквизиты организации
 			+e.benefit
 				.row
 					.col-auto

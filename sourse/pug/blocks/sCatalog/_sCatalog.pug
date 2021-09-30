@@ -3,20 +3,20 @@ mixin sCatalog(data)
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Популярные товары	
+				h2 Каталог продукции
 			.row
-				+card-item('1')
-				+card-item('2')
-				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
-				+card-item('1')
-				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
-				+card-item('1')
-				+card-item('1')
-				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
+				+card-item('1','Трубный прокат', `137 товаров`)
+				+card-item('2','Листовой прокат', `137 товаров`)
+				+card-item('3','Сортовой прокат', `137 товаров`)
+				+card-item('4','Фасонный прокат', `137 товаров`)
+				+card-item('5','Цветной прокат', `137 товаров`)
+				+card-item('6','Трубопроводная арматура', `137 товаров`)
+				+card-item('7','Метизная продукция', `137 товаров`)
+				+card-item('8','Строительные материалы', `137 товаров`)
 	// end sCatalog
 
 mixin sCatalog2(data)
-	// start sCatalog
+	// start sCatalog2
 	+b.sCatalog2.section#sCatalog2&attributes(attributes)
 		.container
 			+form-wrap
