@@ -55,6 +55,7 @@
 
 	.adv-item{
 		text-align: center;
+		height: 100%;
 		&__title{
 			word-wrap:break-word;
 			@include media-breakpoint-up(md) {

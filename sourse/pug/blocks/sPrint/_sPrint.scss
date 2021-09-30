@@ -18,7 +18,7 @@
 		padding-bottom: 25px;
 		align-items: center;
 		display: flex;
-		border-bottom: 1px dashed #e5e8ec;
+		border-bottom: 1px dashed $light2;
 	}
 	.print-body {
 		padding-left: 44px;
@@ -118,7 +118,7 @@
 			padding-bottom: 25px;
 			align-items: center;
 			display: flex;
-			border-bottom: 1px dashed #e5e8ec;
+			border-bottom: 1px dashed $light2;
 		}
 		.print-body {
 			padding-left: 44px;

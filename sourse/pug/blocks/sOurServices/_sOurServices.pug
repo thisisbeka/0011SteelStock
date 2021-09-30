@@ -1,0 +1,17 @@
+mixin sOurServices(data)
+	// start sOurServices
+	+b.SECTION.sOurServices.section#sOurServices&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши услуги
+			.row
+				mixin adv-item(s,t)
+					.col-md-4
+						+b.adv-item
+							+e.img-wrap
+								img.res-i(src=`img/svg/our-services-${s}.svg`, loading='lazy' alt="")
+							+e.title!=t
+				+adv-item('1',`Рубка металла`)
+				+adv-item('2','Резка металла')
+				+adv-item('3','Доставка металла')
+	// end sOurServices
