@@ -1,0 +1,25 @@
+mixin sHowWeWork(data)
+	// start sHowWeWork
+	+b.SECTION.sHowWeWork.bg-wrap.section#sHowWeWork&attributes(attributes)
+		+pic(`how-we-work.jpg`,`bg`, ``).picture-bg
+		.container
+			+b.section-title.text-center
+				h2 Как мы работаем
+			.row
+				mixin item(s, t, d)
+					.col-6.col-md-4.col-lg-2
+						+e.item
+							+e.img-wrap
+								img.res-i(src=`img/svg/how-we-work-${s}.svg`, loading='lazy' alt="")
+								+e.counter!= s
+							+e.title!= t
+							+e.descr!= d
+				+item('1',`Заявка`, `Оформление заявки`)
+				+item('2','Расчет', `Обработка заявки, расчет, внесение уточнений и пояснений`)
+				+item('3','Согласование', `Согласование условий, цен и сроков поставки`)
+				+item('4','Оплата', `Оплата товара`)
+				+item('5','Доставка', `Доставка и отгрузка товара`)
+				+item('6','Приемка', `Приемка товара, оформление отгрузочных документов`)
+			+e.btn-wrap
+				+e.btn.btn.btn-primary(href="#") Подробнее
+	// end sHowWeWork
