@@ -55,10 +55,10 @@
 				left: auto;
 				bottom: auto;
 				// right: 0;
-				top: 0;
+				top: -1px;
 				right: rem(10);
 				@include media-breakpoint-up(md) {
-					top: calc(-1 * var(--sPT));
+					top: calc(-1 * var(--sPT) - 1px);
 				}
 				@include media-breakpoint-up(xxl) {
 					width: rem(110);
@@ -76,10 +76,10 @@
 				height: rem(210);
 				left: auto;
 				// right: 0;
-				bottom: 0;
+				bottom: -1px;
 				right: rem(10);
 				@include media-breakpoint-up(md) {
-					bottom: calc(-1 * var(--sPB));
+					bottom: calc(-1 * var(--sPB) - 1px);
 				}
 				@include media-breakpoint-up(xxl) {
 					width: rem(200);
