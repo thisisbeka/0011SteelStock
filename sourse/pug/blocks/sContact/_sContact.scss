@@ -1,29 +1,133 @@
+// start .sContact
+.sContact {
+	position: relative;
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(80)};
+		// --sPB: 0;
+		--sTPB: #{rem(55)};
+	}
 
-	// start .sContact
-	.sContact {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	background-color: #f5f7f9;
 
+	.row {
+		--bs-gutter-y: 0;
+	}
+	&__item {
+		margin-bottom: rem(35);
+		.strong {
+			font-weight: 600;
+			font-size: rem(18);
+			margin-bottom: rem(11);
+		}
+		p {
+			max-width: 300px;
+			margin-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(md) {
+				margin-left: 0;
+				margin-right: 0;
+				max-width: 100%;
+			}
+		}
+		.tel-n-social {
+			display: inline-flex;
+			&__link {
+				color: $body-color;
+				margin-right: rem(10);
+				@include media-breakpoint-up(lg) {
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
+			.soc {
+				img {
+					width: rem(20);
+				}
+			}
+		}
+	}
+	&__mail {
+		color: $body-color;
+		@include media-breakpoint-up(lg) {
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	&__btn {
+		width: rem(200);
+		@include media-breakpoint-up(md) {
+			width: 200px;
+		}
+	}
+	&__col {
+		height: rem(576);
+		@include media-breakpoint-up(md) {
+			height: auto;
+			position: relative;
+		}
+	}
+	&__map {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: rem(576);
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			width: 50vw;
+			height: 100%;
+		}
+		// width: calc((100vw - 200%) / 2 + 100%);
+		iframe {
+			// width: 100%;
+			// height: 100%;
+		}
+	}
+	&__content {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sContact

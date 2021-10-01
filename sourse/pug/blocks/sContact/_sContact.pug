@@ -1,9 +1,33 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.SECTION.sContact#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			.row
+				.col-md-6.section
+					+e.content
+						+b.section-title
+							h2 Контакты
+						mixin item(t)
+							+e.item
+								.strong!= t
+								block
+						+item(`Адрес:`)
+							p 603124, г. Нижний Новгород, ул. Вторчермета д.&nbsp;1, офис 113
+						+item(`Телефон:`)
+							+b.tel-n-social
+								+e.A.link(href="tel:+79308067171") +7 (930) 806-71-71
+								+b.soc
+									+item-sos().--viber
+										img(src="img/svg/whatsapp-2.svg" alt="")
+									+item-sos().--telegram
+										img(src="img/svg/telegtam-2.svg" alt="")
+									+item-sos().--whatsapp
+										img(src="img/svg/viber-2.svg" alt="")
+						+item(`E-mail:`)
+							+e.A.mail(href="mailto:skladstali@mail.ru") skladstali@mail.ru
+						+e.btn.btn.btn-primary(href="#") Заказать звонок
+				+e.col.col-md-6
+					+e.map
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d64c8fe286eb9d19547f4508b18ccca6b1e6b829dc0039daf72f806703b093c&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+
 	// end sContact

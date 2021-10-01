@@ -52,10 +52,10 @@
 	}
 	&__img-wrap {
 		position: relative;
-		margin-bottom: rem(35);
+		margin-bottom: rem(36);
 		img {
 			width: rem(75);
-			margin-bottom: rem(35);
+			margin-bottom: rem(36);
 		}
 		&::after {
 			@include media-breakpoint-up(md) {
@@ -63,9 +63,9 @@
 				position: absolute;
 				left: calc(-1 * var(--bs-gutter-x) / 2);
 				bottom: 0;
-				width: calc(100% + var(--bs-gutter-x) - 1px);
+				width: calc(100% + var(--bs-gutter-x) -2px);
 				height: 1px;
-				border-top: 1px dotted $white;
+				border-top: 1px dashed $white;
 				opacity: 0.5;
 			}
 		}
