@@ -391,6 +391,15 @@ function eventHandler() {
 		btnClassShowless: 'btn-more'
 	});
 
+	$(".sReadMore__wrap").readall({
+		showheight: null,
+		showrows: 5,
+		btnTextShowmore: 'Показать еще',
+		btnTextShowless: 'Свернуть', 
+		btnClassShowmore: 'btn-more',
+		btnClassShowless: 'btn-more'
+	});
+
 	$(".modal-cookies__is-close").click(function(){
 		$(this).parent().hide();
 	});
