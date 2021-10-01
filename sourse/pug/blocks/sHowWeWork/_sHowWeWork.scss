@@ -1,9 +1,9 @@
 // start .sHowWeWork
 .sHowWeWork {
 	@include media-breakpoint-up(xl) {
-	// --sPT: ;
-	// --sPB: ;
-	--sTPB: 80px;
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: 80px;
 	}
 	color: $white;
 	background-color: $secondary;
@@ -60,7 +60,8 @@
 		&::after {
 			@include media-breakpoint-up(md) {
 				content: "";
-				@include a-cent(x);
+				position: absolute;
+				left: calc(-1 * var(--bs-gutter-x) / 2);
 				bottom: 0;
 				width: calc(100% + var(--bs-gutter-x) - 1px);
 				height: 1px;
