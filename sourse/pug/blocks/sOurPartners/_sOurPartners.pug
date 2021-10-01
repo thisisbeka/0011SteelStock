@@ -1,0 +1,13 @@
+mixin sOurPartners(data)
+	// start sOurPartners
+	+b.SECTION.sOurPartners.section#sOurPartners&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши партнеры
+			.row
+				mixin item(i)
+					.col-6.col-md-4.col-xl-2
+						+pic(`partners-${i}.png`,'',0)
+				- for (var i = 1; i < 7; i++)
+					+item(i)
+	// end sOurPartners

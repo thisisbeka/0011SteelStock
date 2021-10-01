@@ -33,7 +33,6 @@
 	}
 	&__adress {
 		line-height: calc(17 / 14);
-		color: #333843;
 		@include media-breakpoint-up(xxl) {
 			font-size: rem(14);
 		}
@@ -98,7 +97,7 @@
 		}
 		&__item {
 			span {
-				color: #333843;
+				color: $body-color;
 				@include media-breakpoint-down(lg) {
 					display: none;
 				}

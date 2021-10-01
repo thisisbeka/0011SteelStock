@@ -20,12 +20,12 @@
 			height: 100%;
 			left: 0;
 			top: 0;
-			background-color: #333843;
+			background-color: $body-color;
 			opacity: 0.7;
 		}
-		img {
-			// object-position: center 94%;
-		}
+		// img {
+		// 	object-position: center 94%;
+		// }
 	}
 	.row {
 		--bs-gutter-y: #{rem(50)};
