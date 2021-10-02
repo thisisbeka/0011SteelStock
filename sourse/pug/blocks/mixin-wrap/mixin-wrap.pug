@@ -95,34 +95,36 @@ mixin page-head(btns,t, ...items)
 					.col-auto
 						block
 
-//list-group-item.list-group-item-action(href='#')
+mixin listAside()
+	.col-3
+		.list-block
+			.list-group
+				mixin item(i, t, a, ...items)
+					div.has-children(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
+						a(href="#")
+							+pic(`list-group-${i}.png`, '', 0)
+							span!= t
+						ul.sub-menu
+							each item in items
+								li: a(href="#")= item 
+				+item(1,'Трубный прокат','active','Труба бесшовная','Труба оцинкованная','Труба ВГП','Труба профильная','Труба электросварная')
+				+item(2,`Листовой прокат`, ``,'Металлочерепица','Профнастил','Лист рифленый','Лист ПВЛ','Лист холоднокатаный','Лист горячекатанный')
+				+item(3,'Сортовый прокат', ``,'Катанка','Шестигранник','Полоса','Квадрат','Круг','Арматура')
+				+item(4,'Фасонный прокат', ``,'Швеллер гнутый','Швеллер','Уголок','Двутавр')
+				+item(5,'Цветной прокат', ``,'Латунный шестигранник','Латунная труба','Латунная проволока','Латунный лист','Латунная лента','Латунный круг','Медная лента','Медная труба','Медная проволока','Медный лист','Медный круг','Алюминиевая труба','Алюминиевая плита','Алюминиевый лист','Алюминиевый круг')
+				+item(6,'Трубопроводная арматура', ``,'Балка низколегированная Б1','Сантехизделия\трубопроводная арматура')
+				+item(7,'Метизная продукция', ``,'Дверная фурнитура','Монтажные детали','Анкеры','Метрический крепеж','Заклепки','Гвозди','Грузовой крепеж','Дюбели, дюбель-гвозди','Шурупы, саморезы')
+				+item(8,'Строительные материалы', ``,'Изоляционные материалы','Гидроизоляция','Строительные смеси и грунты',`Строительство стен  и&nbsp;перегородок`,'ЛКМ, пены, герметики')
 mixin page-body(btns,t, ...items)
 	.container.container--main
 		.row.row--main
-			.col-3
-				.list-block
-					.list-group
-						mixin item(i, t, a)
-							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
-								+pic(`list-group-${i}.png`, '', 0)
-								span!= t
-						+item(1,'Двигатели','active')
-						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
-						+item(1,'Блоки цилиндров', ``)
-						+item(1,'Валы коленчатые', ``)
-						+item(1,'Цилиндропоршневая группа', ``)
-						+item(1,'Запчасти двигателей', ``)
-						+item(1,'Топливная система', ``)
-						+item(1,'Двигатели Cummins', ``)
-						+item(3,'Long/Short Block Cummins', ``)
-						+item(4,'Коробки передач', ``)
-						+item(1,'Главные передачи', ``)
-						+item(1,'Коробки<br />раздаточные', ``)
+			+listAside()
 			.col-9.col--ph
 				+page-head(btns,t, ...items)
 				block
 
 //list-group-item.list-group-item-action(href='#')
+
 mixin page-body04(btns,t, ...items)
 	+b.page-body04.section#page-body04&attributes(attributes)
 		.container
@@ -175,25 +177,7 @@ mixin page-body04(btns,t, ...items)
 mixin page-body05(btns,t, ...items)
 	.container.container--main
 		.row.row--main
-			.col-3
-				.list-block
-					.list-group
-						mixin item(i, t, a)
-							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
-								+pic(`list-group-${i}.png`, '', 0)
-								span!= t
-						+item(1,'Двигатели','')
-						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
-						+item(1,'Блоки цилиндров', ``)
-						+item(1,'Валы коленчатые', ``)
-						+item(1,'Цилиндропоршневая группа', ``)
-						+item(1,'Запчасти двигателей', ``)
-						+item(1,'Топливная система', ``)
-						+item(1,'Двигатели Cummins', ``)
-						+item(3,'Long/Short Block Cummins', ``)
-						+item(4,'Коробки передач', ``)
-						+item(1,'Главные передачи', ``)
-						+item(1,'Коробки<br />раздаточные', ``)
+			+listAside()
 			.col-9.col--ph
 				+page-head(btns,t, ...items)
 					+shop-btns()
@@ -275,25 +259,7 @@ mixin search()
 mixin page-body06(btns,t, ...items)
 	.container.container--main
 		.row.row--main
-			.col-3
-				.list-block
-					.list-group
-						mixin item(i, t, a)
-							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
-								+pic(`list-group-${i}.png`, '', 0)
-								span!= t
-						+item(1,'Двигатели','')
-						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
-						+item(1,'Блоки цилиндров', ``)
-						+item(1,'Валы коленчатые', ``)
-						+item(1,'Цилиндропоршневая группа', ``)
-						+item(1,'Запчасти двигателей', ``)
-						+item(1,'Топливная система', ``)
-						+item(1,'Двигатели Cummins', ``)
-						+item(3,'Long/Short Block Cummins', ``)
-						+item(4,'Коробки передач', ``)
-						+item(1,'Главные передачи', ``)
-						+item(1,'Коробки<br />раздаточные', ``)
+			+listAside()
 			.col-9.col--ph
 				+page-head(btns,t, ...items)
 				block
