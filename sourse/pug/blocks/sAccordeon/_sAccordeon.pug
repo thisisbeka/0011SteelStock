@@ -1,0 +1,16 @@
+mixin sAccordeon(data)
+	// start sAccordeon
+	+b.sAccordeon.section&attributes(attributes)
+		.container
+			+b.section-title
+				h4  Акордеон
+			mixin item(t)
+				+b.accordion-item--js&attributes(attributes)
+					+e.head= t
+					+e.body
+						p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст...
+			+item('Трубный прокат').active
+			+item('Метизная продукция')
+			+item('Трубный прокат')
+			+item('Метизная продукция')
+	// end sAccordeon

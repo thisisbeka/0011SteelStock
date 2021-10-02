@@ -6,6 +6,9 @@ include ../blocks/sAdvantageBlock/_sAdvantageBlock.pug
 include ../blocks/sFeedbackForm/_sFeedbackForm.pug
 include ../blocks/sAppeal/_sAppeal.pug
 include ../blocks/sRequisites/_sRequisites.pug
+include ../blocks/sGal/_sGal.pug
+include ../blocks/sAccordeon/_sAccordeon.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sDocs/_sDocs.pug
 //- include ../blocks/sQ/_sQ.pug
 
@@ -48,6 +51,8 @@ block pagecontent
 			+sDocs(`Файлы`)
 			+sAdvantageBlock()
 			+sFeedbackForm()
+			+sGal
+			+sAccordeon
 	//- +sContact()
 	+footer()
 

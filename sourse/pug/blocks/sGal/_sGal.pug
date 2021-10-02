@@ -1,0 +1,13 @@
+mixin sGal(data)
+	// start sGal
+	+b.sGal.section&attributes(attributes)
+		.container
+			+b.section-title
+				h4  Галерея
+				
+			.row
+				- for (var x = 1; x < 7; x++)
+					+e.col.col-sm-4.col-6
+						+e.img-wrap(href=`img/@2x/gal-${x}.jpg` data-fslightbox="gal").bg-wrap
+							+pic(`gal-${x}.jpg`,'bg').picture-bg
+	// end sGal
