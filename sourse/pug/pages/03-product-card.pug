@@ -12,6 +12,8 @@ include ../blocks/sCard/_sCard.pug
 include ../blocks/sContactInfo/_sContactInfo.pug
 include ../blocks/sSimilar/_sSimilar.pug
 include ../blocks/sReadMore/_sReadMore.pug
+include ../blocks/sAdvantageBlock/_sAdvantageBlock.pug
+include ../blocks/sCardBody/_sCardBody.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= '4.jpg'
@@ -30,6 +32,8 @@ block pagecontent
 	+header()
 	+page-body('', title, 'Каталог', 'Трубный прокат', title)
 		+sCard()
+		+sAdvantageBlock('emptyTitle')
+		+sCardBody
 		//- +b.sCardLink.py-2
 		//- 	h4.strong.mb-3  Дополнительные модификации
 		//- 	.list-group
@@ -52,12 +56,12 @@ block pagecontent
 		//- 		+item("Двигатель 74009.10-400 210 л/с ЕВРО-0")
 		//- 		+item("Двигатель 74009.10-450 210 л/с ЕВРО-0")
 		//- 		+item("Двигатель 74009.10-412 210 л/с ЕВРО-0")
-		+sContactInfo()
-		+sReadMore()
-		+sSimilar()
-	+sForm(`Не&nbsp;нашли нужную модель?`)
-	+sDelivery()
-	+sAdvantages()
-	+sQ()
+		//- +sContactInfo()
+		//- +sReadMore()
+		//- +sSimilar()
+	//- +sForm(`Не&nbsp;нашли нужную модель?`)
+	//- +sDelivery()
+	//- +sAdvantages()
+	//- +sQ()
 	+footer()
 

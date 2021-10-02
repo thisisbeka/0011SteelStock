@@ -1,7 +1,8 @@
-mixin sAdvantageBlock(data)
+mixin sAdvantageBlock(emptyTitle)
 	// start sAdvantageBlock
-	+b.sAdvantageBlock#sAdvantageBlock&attributes(attributes)
-		h4 Преимущества с&nbsp;иконками и&nbsp;текстом
+	+b.sAdvantageBlock&attributes(attributes)
+		if !emptyTitle
+			h4 Преимущества с&nbsp;иконками и&nbsp;текстом
 		.row
 			mixin adv-item(s,t)
 				.col-6.col-xl-3

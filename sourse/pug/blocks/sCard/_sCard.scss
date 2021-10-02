@@ -1,7 +1,7 @@
 // start .sCard
 .sCard {
 	--sPT: #{rem(38)};
-	--sPB: #{rem(20)};
+	--sPB: #{rem(10)};
 	// --sTPB: ;
 	.container {
 		& > .row {
@@ -63,10 +63,13 @@
 			}
 		}
 	}
-
+	
 	&__img-wrap {
 		@include block;
 		@include mt;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(30);
+		}
 		border-radius: $border-radius;
 		overflow: hidden;
 		background-color: $light;
@@ -160,7 +163,8 @@
 		@include rfs(32px);
 		line-height: (39 / 32);
 		font-weight: bold;
-		margin-bottom: rem(20);
+		margin-bottom: rem(30);
+		margin-top: rem(45);
 	}
 	&__contact {
 		display: flex;
