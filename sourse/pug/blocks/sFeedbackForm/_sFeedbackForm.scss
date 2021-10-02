@@ -1,14 +1,93 @@
 // start .sFeedbackForm
 .sFeedbackForm {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	border-radius: 5px;
+	margin: rem(30) 0;
+	padding-left: 38px;
+	padding-right: 38px;
+	padding-bottom: 38px;
+	padding-top: 30px;
+	background-color: $light;
+	h2 {
+		font-size: rem(32);
+		font-weight: 700;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+	}
+	input {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+		@include media-breakpoint-down(md) {
+			margin-top: 10px;
+		}
+	}
+	&__caption {
+		color: #778089;
+		margin-top: 24px;
+		font-weight: 500;
+		font-size: 20px;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+			text-align: left;
+		}
+	}
+	.form-wrap {
+		margin-top: 40px;
+		@include media-breakpoint-up(md) {
+			margin-top: 30px;
+		}
+		textarea {
+			min-height: 120px;
+			text-align: center;
+			vertical-align: middle;
+			@include media-breakpoint-up(md) {
+				min-height: rem(100);
+				text-align: left;
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 10px;
+			}
+		}
+		&__btn {
+			width: 100%;
+			@include media-breakpoint-up(md) {
+				width: rem(283);
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 10px;
+			}
+		}
+		.agreement {
+			font-size: rem(14);
+			line-height: 125%;
+			@include media-breakpoint-up(md) {
+				max-width: rem(380);
+				margin-top: rem(7);
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 30px;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sFeedbackForm
