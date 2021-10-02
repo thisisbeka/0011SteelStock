@@ -484,8 +484,8 @@ window.onload = function () {
 if (document.querySelector("#map")) {
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
-			center: [55.724555, 52.444616],
-			zoom: 14,
+			center: [56.31098206843043, 43.859444499999974],
+			zoom: 16,
 			controls: ['zoomControl']
 		}, {//searchControlProvider: 'yandex#search'
 		}),
@@ -501,7 +501,7 @@ if (document.querySelector("#map")) {
 			// Необходимо указать данный тип макета.
 			iconLayout: 'default#image',
 			// Своё изображение иконки метки.
-			iconImageHref: 'img/svg/mark.svg',
+			iconImageHref: '../img/svg/mark.svg',
 			// Размеры метки.
 			iconImageSize: [30, 42],
 			// Смещение левого верхнего угла иконки относительно

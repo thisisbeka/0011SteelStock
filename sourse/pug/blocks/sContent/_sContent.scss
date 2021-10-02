@@ -34,7 +34,7 @@
 		}
 	}
 	h4 {
-		font-size: 25px;
+		font-size: 24px;
 		line-height: calc(30 / 25);
 		@include media-breakpoint-up(sm) {
 			@include rfs(25px);
@@ -48,7 +48,7 @@
 		}
 	}
 	h6 {
-		font-size: 16px;
+		font-size: 18px;
 		line-height: calc(20 / 16);
 		@include media-breakpoint-up(sm) {
 			@include rfs(16px);
@@ -57,23 +57,23 @@
 
 	p {
 		margin-bottom: rem(24);
-		& + h1 {
+		& + :is(h1, h2, h3, h4, h5, h6) {
 			margin-top: rem(40);
 		}
-		& + h2 {
-			margin-top: rem(40);
+		a {
+			text-decoration: underline;
+			&:hover {
+				@include media-breakpoint-up(lg) {
+					text-decoration: none;
+				}
+			}
 		}
-		& + h3 {
-			margin-top: rem(40);
-		}
-		& + h4 {
-			margin-top: rem(40);
-		}
-		& + h5 {
-			margin-top: rem(40);
-		}
-		& + h6 {
-			margin-top: rem(40);
+	}
+	ul,
+	ol {
+		margin-bottom: rem(30);
+		& + :is(h1, h2, h3, h4, h5, h6) {
+			margin-top: rem(60);
 		}
 	}
 	picture {
@@ -96,14 +96,31 @@
 			top: 0;
 		}
 	}
-	a {
-		text-decoration: underline;
-		&:hover {
-			@include media-breakpoint-up(lg) {
-				text-decoration: none;
+	
+	ul,
+	ol {
+		padding-left: rem(20);
+		// font-size: rem(14);
+		line-height: 175%;
+	}
+
+	ul {
+		list-style: none;
+		li {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				top: rem(13);
+				width: 2px;
+				height: 2px;
+				border-radius: 50%;
+				left: rem(-10);
+				background-color: currentColor;
 			}
 		}
 	}
+
 	&__map {
 		padding: rem(30) 0;
 		h4 {
@@ -114,7 +131,6 @@
 			@include media-breakpoint-up(md) {
 				height: 237px;
 			}
-
 			@include media-breakpoint-up(xl) {
 				height: 320px;
 			}
@@ -124,13 +140,23 @@
 		margin: rem(30) 0;
 	}
 	.sRequisites {
-		padding: rem(30) 0;
+		padding: rem(30) 0 rem(60);
 	}
 	.sAdvantageBlock {
 		padding: rem(30) 0;
+		h4 {
+			margin-bottom: rem(40);
+		}
 	}
 	.sFeedbackForm {
-		margin: rem(30) 0;
+		margin: rem(30) 0 0 0;
+	}
+
+	.sDocs {
+		padding: rem(30) 0;
+		h4 {
+			margin-bottom: rem(40);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
