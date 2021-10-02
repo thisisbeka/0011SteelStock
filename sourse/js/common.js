@@ -26,7 +26,7 @@ const JSCCommon = {
 			// infobar: false,
 			// touch: false,
 			// infinite: false,
-			// dragToClose: false,
+			dragToClose: false,
 			type: 'inline',
 		
 		});
@@ -384,7 +384,7 @@ function eventHandler() {
 
 	$(".sReadMore__text").readall({
 		showheight: null,
-		showrows: 8,
+		showrows: 7,
 		btnTextShowmore: 'Показать еще',
 		btnTextShowless: 'Свернуть', 
 		btnClassShowmore: 'btn-more',
@@ -465,8 +465,8 @@ var data = sessionStorage.getItem('key');
 // document.body.classList.add('loaded_hiding');
 
 window.onload = function () {
+	if (!sessionStorage.getItem('key') == 1) {
 
-	if (!data == 1) {
 		window.setTimeout(function () {
 			document.body.classList.add('loaded');
 			var wow = new WOW({
@@ -474,16 +474,14 @@ window.onload = function () {
 				animateClass: 'animate__animated',
 			});
 			wow.init();
-		}, 500); 
+		}, 500);
+		sessionStorage.setItem('key', 1);
+		console.log(1);
 	}
-	else{
-		document.body.classList.remove('loaded_hiding');
-		var wow = new WOW({
-			mobile: false,
-			animateClass: 'animate__animated',
-		});
-		wow.init(); 
-	}
+}
+if (sessionStorage.getItem('key') == 1) {
+	document.body.classList.remove('loaded_hiding');
+	console.log(0);
 }
 
 

@@ -9,7 +9,7 @@ mixin footer()
 							img(src="img/svg/logo.svg", alt="")
 						+e.UL.contacts
 							+tel-n-social(`tel:+79308067171`, `+7 (930) 806-71-71`)
-							li #[a(href='#') Заказать звонок]
+							li #[a.link-modal-js(href="#modal-request") Заказать звонок]
 							li #[a.link-secondary2(href='mailto:skladstali@mail.ru') skladstali@mail.ru]
 							+e.BUTTON.btn.btn.d-none.d-lg-inline-block
 								span Наверх

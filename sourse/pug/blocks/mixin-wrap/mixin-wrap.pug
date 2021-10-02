@@ -134,27 +134,22 @@ mixin page-body04(btns,t, ...items)
 					+e.input-search
 						//- +input()#search
 						.page-body04__input-wrap.form-group
-							input.page-body04__input.form-control(name="text" type="text" value="Двигатель")
+							input.page-body04__input.form-control(name="text" type="text" value="Труба вгп")
 							button
 								+icon("search-icon")
 					+e.caption-search
 						+e.title!=`Вы искали:&nbsp;`
-							span двигатель
+							span Труба вгп
 						+e.count Найдено на сайте: 
-							span 82
+							span 14
 					+e.result
 						mixin str-search(t)
 							+e.item(href="#")
 								span!=t
 								+icon('arrow')
-						+str-search('Двигатель 740.31 (740.31-1000400)')
-						+str-search('Двигатель 740.11 (740.11-1000400)')
-						+str-search('Двигатель 740.31 (740.31-1000400)')
-						+str-search('Двигатель 740.11 (740.11-1000400)')
-						+str-search('Двигатель 740.31 (740.31-1000400)')
-						+str-search('Двигатель 740.11 (740.11-1000400)')
-						+str-search('Двигатель 740.31 (740.31-1000400)')
-						+str-search('Двигатель 740.11 (740.11-1000400)')
+						- for (var x = 0; x < 4; x++)
+							+str-search('Труба оцинкованная')
+							+str-search('Труба вгп') 
 					+e.btn.btn-light.animation-rotate
 						+icon('refresh')
 						span Показать еще
@@ -166,12 +161,15 @@ mixin page-body04(btns,t, ...items)
 							.span-first Не&nbsp;можете найти необходимую информацию или&nbsp;товар?
 							.span-second Вы&nbsp;всегда можете обратиться&nbsp;к нам по контактам&nbsp;указанным ниже. Мы&nbsp;будем рады помочь!
 							+e.contact
-								div.div-first
-									.span-call Звонок бесплатный
-									a.strong(href=`tel:+78007008572`) 8(800)700-85-72
-								div
-									.span-mail По всем вопросам
-									a.strong(href=`mailto:zapchasty-kama@yandex.ru`)='zapchasty-kama@yandex.ru'
+								.row
+									.col-lg-12.col-auto
+										div.div-first
+											.span-call Звонок бесплатный
+											a.strong(href=`tel:+7(930)806-71-21`) +7 (930) 806-71-21
+									.col-lg-12.col-auto
+										div
+											.span-mail По всем вопросам
+											a.strong(href=`mailto:skladstali@mail.ru`) skladstali@mail.ru
 						button.btn.btn-primary(type="button") Оставить заявку
 
 mixin page-body05(btns,t, ...items)
@@ -241,7 +239,7 @@ mixin page404(t)
 	+b.page404
 		.container
 			+e.logo
-				img(src="img/svg/logo-full.svg" alt="...")
+				img(src="img/svg/logo-head.svg" alt="...")
 			+pic('pic404','',0).pic404
 			h1 Страница не найдена
 			+e.caption Неправильно набран адрес, или такой страницы не&nbsp;существует.

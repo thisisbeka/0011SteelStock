@@ -2,7 +2,7 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-	max-width: rem(500);
+	max-width: rem(460);
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -234,7 +234,7 @@ a {
 	}
 	&:not(.has-image):before {
 		@include media-breakpoint-down(md) {
-			margin: 0;
+			// margin: 0;
 		}
 	}
 }
@@ -399,16 +399,16 @@ a {
 .short-modal {
 	padding: 40px;
 	@include media-breakpoint-down(md) {
-		padding: 60px;
-		width: 100%;
-		max-width: none;
+		// padding: 60px;
+		// width: 100%;
+		// max-width: none;
 	}
 	@include media-breakpoint-up(xxl) {
 		min-width: 640px;
 	}
+	min-width: 580px;
+	border-radius: 5px;
 	@include media-breakpoint-up(md) {
-		min-width: 580px;
-		border-radius: 5px;
 	}
 	.btn-outline-primary {
 		border-width: 2px;
@@ -465,7 +465,7 @@ a {
 			}
 			@include media-breakpoint-down(md) {
 				margin-top: 40px;
-				width: 448px;
+				// width: 448px;
 			}
 		}
 	}
@@ -479,7 +479,7 @@ a {
 			justify-content: space-between;
 			@include media-breakpoint-down(md) {
 				margin-top: 40px;
-				width: 448px;
+				// width: 448px;
 				flex-direction: column;
 			}
 			.btn-outline-primary {
@@ -493,28 +493,28 @@ a {
 			padding-right: 10px;
 			margin-top: 0;
 			@include media-breakpoint-down(md) {
-				margin-top: 0;
-				width: 448px;
+				// margin-top: 0;
+				// width: 448px;
 			}
 		}
 	}
 }
 
 .request {
+	border-radius: 5px;
 	@include media-breakpoint-up(md) {
-		border-radius: 5px;
 	}
 	@include media-breakpoint-down(md) {
-		flex-grow: 1;
+		// flex-grow: 1;
 	}
 	padding: 40px;
-	width: 460px;
+	// width: 460px;
 	@include media-breakpoint-down(md) {
-		padding-left: 64px;
-		padding-right: 64px;
-		justify-content: center;
-		width: 100%;
-		max-width: none;
+		// padding-left: 64px;
+		// padding-right: 64px;
+		// justify-content: center;
+		// width: 100%;
+		// max-width: none;
 	}
 	h2 {
 		@include media-breakpoint-down(md) {

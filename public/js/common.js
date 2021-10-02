@@ -29,7 +29,7 @@ const JSCCommon = {
 			// infobar: false,
 			// touch: false,
 			// infinite: false,
-			// dragToClose: false,
+			dragToClose: false,
 			type: 'inline'
 		}); // $(link).fancybox({
 		// });
@@ -386,7 +386,7 @@ function eventHandler() {
 	});
 	$(".sReadMore__text").readall({
 		showheight: null,
-		showrows: 8,
+		showrows: 7,
 		btnTextShowmore: 'Показать еще',
 		btnTextShowless: 'Свернуть',
 		btnClassShowmore: 'btn-more',
@@ -462,7 +462,7 @@ sessionStorage.setItem('key', 1); // Получение данных из sessio
 var data = sessionStorage.getItem('key'); // document.body.classList.add('loaded_hiding');
 
 window.onload = function () {
-	if (!data == 1) {
+	if (!sessionStorage.getItem('key') == 1) {
 		window.setTimeout(function () {
 			document.body.classList.add('loaded');
 			var wow = new WOW({
@@ -471,15 +471,15 @@ window.onload = function () {
 			});
 			wow.init();
 		}, 500);
-	} else {
-		document.body.classList.remove('loaded_hiding');
-		var wow = new WOW({
-			mobile: false,
-			animateClass: 'animate__animated'
-		});
-		wow.init();
+		sessionStorage.setItem('key', 1);
+		console.log(1);
 	}
 };
+
+if (sessionStorage.getItem('key') == 1) {
+	document.body.classList.remove('loaded_hiding');
+	console.log(0);
+}
 
 if (document.querySelector("#map")) {
 	ymaps.ready(function () {

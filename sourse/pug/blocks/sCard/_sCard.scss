@@ -1,7 +1,7 @@
 // start .sCard
 .sCard {
 	--sPT: #{rem(38)};
-	--sPB: #{rem(10)};
+	--sPB: #{rem(30)};
 	// --sTPB: ;
 	.container {
 		& > .row {
@@ -67,7 +67,7 @@
 	&__img-wrap {
 		@include block;
 		@include mt;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			margin-bottom: rem(30);
 		}
 		border-radius: $border-radius;
@@ -145,7 +145,7 @@
 	&__buttons {
 		margin-bottom: rem(33);
 		@include media-breakpoint-only(lg) {
-			margin-bottom: 0;
+			// margin-bottom: 0;
 		}
 	}
 	&__btn {
@@ -164,15 +164,17 @@
 		line-height: (39 / 32);
 		font-weight: bold;
 		margin-bottom: rem(30);
-		margin-top: rem(45);
+		@include media-breakpoint-up(lg) {
+
+			margin-top: rem(45);
+		}
+		margin-top: rem(20);
 	}
 	&__contact {
 		display: flex;
-		align-items: center;
+		// align-items: center;
 		justify-content: space-between;
-		@include media-breakpoint-only(lg) {
-			display: none;
-		}
+	 
 		&--lg-only {
 			display: none;
 			@include media-breakpoint-only(lg) {
