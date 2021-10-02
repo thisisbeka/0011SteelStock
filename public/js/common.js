@@ -441,6 +441,12 @@ function eventHandler() {
 	$('.btn-close-js').click(function () {
 		$(this).parent().find('.input-search').val(" ");
 	});
+	$(".has-children> a").click(function (e) {
+		e.preventDefault();
+		$(this).next().slideToggle(function () {
+			$(this).parents(".has-children").toggleClass("active");
+		});
+	});
 }
 
 ;

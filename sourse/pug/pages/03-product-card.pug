@@ -14,10 +14,10 @@ include ../blocks/sSimilar/_sSimilar.pug
 include ../blocks/sReadMore/_sReadMore.pug
 block variables
 	- let  mainPage= 'main-page' 
-	//- - let  bg= '02-catalog.jpg'
+	- let  bg= '4.jpg'
 
 block title
-	- let  title= 'Двигатель 740.11 (740.11-1000400)'
+	- let  title= 'Труба электросварная'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -28,7 +28,7 @@ block pagecontent
 	//- +sContact()
 	+mob-mnu()
 	+header()
-	+page-body('', title, 'Каталог товаров', 'Двигатели', 'Двигатель 740.11 (740.11-1000400)')
+	+page-body('', title, 'Каталог', 'Трубный прокат', title)
 		+sCard()
 		+b.sCardLink.py-2
 			h4.strong.mb-3  Дополнительные модификации
