@@ -24,7 +24,10 @@
 } // end.sCatalog
 .sCatalog2 {
 	// --sPT: ;
-	// --sPB: ;
+	@include media-breakpoint-up(md) {
+	--sPB: 20px;
+}
+--sPB: 0;
 	// --sTPB: ;
 	&__btn {
 		&:hover {

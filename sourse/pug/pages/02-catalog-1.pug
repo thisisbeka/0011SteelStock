@@ -13,7 +13,7 @@ block variables
 	- let  bg= '02-catalog.jpg'
 
 block title
-	- let  title= 'Каталог продукции'
+	- let  title= 'Трубный прокат'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -23,8 +23,8 @@ block pagecontent
 	//- +headerBlock()
 	+mob-mnu()
 	+header()
-	+page-body('',title, title)
-		+sCatalog2()
+	+page-body('',title,'Каталог', title)
+		+sCatalog3()
 		+b.sContent.section.pb-0
 			p Какой дом, помещение или офис обходится без качественной канализации, водопровода или отопления? Монтаж любого водопровода начинается с&nbsp;выбора качественных труб. Одним из&nbsp;популярных и&nbsp;прочных материалов является сталь.
 
