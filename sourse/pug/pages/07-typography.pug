@@ -11,7 +11,7 @@ include ../blocks/sRequisites/_sRequisites.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '06-contacts.jpg'
+	- let  bg= '07-typography.jpg'
 
 block title
 	- let  title= 'Типовая страница'
@@ -26,11 +26,10 @@ block pagecontent
 	+header()
 	+page-body06('btns','Типовая страница', title)
 		+sContent()
-		+contacts-page
-		+sAppeal()
-		+sRequisites()
-		+sAdvantageBlock()
-		+sFeedbackForm()
+			+sAppeal()
+			+sRequisites()
+			+sAdvantageBlock()
+			+sFeedbackForm()
 	//- +sContact()
 	+footer()
 
