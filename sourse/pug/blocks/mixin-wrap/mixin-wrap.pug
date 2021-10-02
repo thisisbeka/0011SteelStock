@@ -470,3 +470,18 @@ mixin delivery-page()
 							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
 						.tabs__content
 							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+
+mixin advantage-block
+	+b.advantage-block
+		h4 Преимущества с&nbsp;иконками и&nbsp;текстом
+		.row
+			mixin adv-item(s,t)
+				.col-6.col-xl-3
+					+b.adv-item
+						+e.img-wrap
+							img.res-i(src=`img/svg/advantages-${s}.svg`, loading='lazy' alt="")
+						+e.title!=t
+			+adv-item('1',`Широкий ассортимент различного вида металлопроката и&nbsp;услуг`)
+			+adv-item('2','Доставка товара на&nbsp;Ваш объект точно в&nbsp;срок')
+			+adv-item('3','Вся продукция сертифицирована и&nbsp;соответствует ГОСТу')
+			+adv-item('4','Комплексные поставки')
