@@ -11,31 +11,48 @@
 	h5,
 	h6 {
 		margin-bottom: rem(20);
-		
 	}
 	h1 {
 		font-size: 45px;
 		line-height: calc(55 / 45);
+		@include media-breakpoint-up(sm) {
+			@include rfs(45px);
+		}
 	}
 	h2 {
 		font-size: 35px;
 		line-height: calc(43 / 35);
+		@include media-breakpoint-up(sm) {
+			@include rfs(35px);
+		}
 	}
 	h3 {
 		font-size: 30px;
 		line-height: calc(37 / 30);
+		@include media-breakpoint-up(sm) {
+			@include rfs(30px);
+		}
 	}
 	h4 {
 		font-size: 25px;
 		line-height: calc(30 / 25);
+		@include media-breakpoint-up(sm) {
+			@include rfs(25px);
+		}
 	}
 	h5 {
 		font-size: 20px;
 		line-height: calc(24 / 20);
+		@include media-breakpoint-up(sm) {
+			@include rfs(20px);
+		}
 	}
 	h6 {
 		font-size: 16px;
 		line-height: calc(20 / 16);
+		@include media-breakpoint-up(sm) {
+			@include rfs(16px);
+		}
 	}
 
 	p {
@@ -84,6 +101,22 @@
 		&:hover {
 			@include media-breakpoint-up(lg) {
 				text-decoration: none;
+			}
+		}
+	}
+	&__map {
+		padding: rem(30) 0;
+		h4 {
+			margin-bottom: rem(40);
+		}
+		&-widget {
+			height: 178px;
+			@include media-breakpoint-up(md) {
+				height: 237px;
+			}
+
+			@include media-breakpoint-up(xl) {
+				height: 320px;
 			}
 		}
 	}
