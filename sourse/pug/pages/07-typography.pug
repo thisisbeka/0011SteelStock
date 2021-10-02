@@ -2,6 +2,7 @@ extends layout/main.pug
 
 
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sAdvantageBlock/_sAdvantageBlock.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
@@ -25,8 +26,8 @@ block pagecontent
 	+header()
 	+page-body06('btns','Типовая страница', title)
 		+sContent()
-		+contacts-page
-		+advantage-block
+		//- +contacts-page
+		+sAdvantageBlock()
 		+shop-form2
 	//- +sContact()
 	+footer()
