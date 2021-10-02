@@ -1,66 +1,6 @@
 mixin modal() 
 	//  start modals
 
-	+b.modal-win.city-choose(id="modal-search-list" class=" " style="display: none" )
-		+form-wrap
-			h2 Выберите город
-			+input("Ваш город",'text').input-search
-				button.btn.btn--input.btn-close-js(type="button")
-					+icon('close')
-			+e.scroll-list
-				ul
-					a(href="#")
-						li.active Барнаул
-					a(href='#')
-						li Волгоград
-					a(href='#')
-						li Воронеж
-					a(href='#')
-						li Екатеринбург
-					a(href='#')
-						li Иркутск
-					a(href='#')
-						li Кемерово
-					a(href='#')
-						li Красноярск
-					a(href='#')
-						li Новосибирск
-					a(href='#')
-						li Омск
-					a(href='#')
-						li Оренбург
-					a(href='#')
-						li Пермь
-					a(href='#')
-						li Ростов-на-Дону
-					a(href='#')
-						li Самара
-					a(href='#')
-						li Саратов
-					a(href='#')
-						li Томск
-					a(href='#')
-						li Тула
-					a(href='#')
-						li Тюмень
-					a(href='#')
-						li Улан-Удэ
-					a(href='#')
-						li Хабаровск
-					a(href='#')
-						li Якутск
-	// #modal-search-list
-	+b.modal-win.city-choose(id="modal-search-result" class=" " style="display: none" ).city-choose--loading
-		+form-wrap
-			h2 Выберите город
-			+input("Ваш город",'text').input-search
-				button.btn.btn--input.loading
-					+icon('loading')
-			+e.scroll-list
-				ul
-					a(href="#")
-						li Набережные Челны
-	// #modal-search-result
 
 	+b.modal-win.short-modal(id="modal-gratitude" class=" " style="display: none" )
 		+form-wrap
@@ -68,16 +8,6 @@ mixin modal()
 			+e.caption Наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
 			+e.btn.btn.btn-primary.modal-close-js Закрыть
 	// #modal-gratitude
-
-	+b.modal-win.short-modal.in-cart(id="modal-in-cart" class=" " style="display: none" )
-		+form-wrap
-			h2 Товар добавлен в&nbsp;корзину
-			+e.caption Двигатель 740.11 (740.11-1000400)
-			.btns
-				+e.btn.btn.btn-primary Оформить заказ
-				+e.btn.btn.btn-outline-primary Продолжить покупки
-	// #modal-in-cart
-
 	+b.modal-win.request(id="modal-request" class=" " style="display: none" )
 		+form-wrap
 			h2 Оставить заявку

@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+include ../blocks/sDelivery/_sDelivery.pug
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '02-catalog.jpg'
+
+block title
+	- let  title= 'Трубный прокат'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	//- +headerBlock()
+	+mob-mnu()
+	+header()
+	+page-body('',title,'Каталог', title)
+		+sCatalog3()
+		+b.sContent.section.pb-0
+			p Какой дом, помещение или офис обходится без качественной канализации, водопровода или отопления? Монтаж любого водопровода начинается с&nbsp;выбора качественных труб. Одним из&nbsp;популярных и&nbsp;прочных материалов является сталь.
+
+			p Стальные трубы надежный и&nbsp;дешевый материал. Многолетний опыт показывает высокий уровень их&nbsp;прочности и&nbsp;жесткости. Срок их&nbsp;службы 30-40&nbsp;лет. Прекрасно служат при строительстве любых опорных конструкций. Достоинством таких изделий выступает теплопроводность, герметичность и&nbsp;простота в&nbsp;использовании, ремонте и&nbsp;реконструкции.
+
+			p Наши стальные трубы необходимы для качественной прокладки водопроводных, канализационных и&nbsp;транспортных коммуникаций. Так&nbsp;же трубы понадобятся при возведении конструкций, в&nbsp;качестве опоры. Например: заборы, стены, мосты и&nbsp;другие.
+
+			p Все наши изделия сертифицированы и&nbsp;производятся по&nbsp;ГОСТу. Документация находится в&nbsp;свободном доступе на&nbsp;сайте.
+
+			p Благодаря разным видам и&nbsp;размерам, мы&nbsp;поможем подобрать необходимый вариант, который подойдёт именно вам и&nbsp;вашим условиям окружающей среды.
+
+			p Заказать стальные трубы вы&nbsp;можете на&nbsp;нашем сайте или позвонив по&nbsp;телефону.
+	//- +sForm(`Не&nbsp;нашли нужную модель?`)
+	//- +sDelivery()
+	//- +sAdvantages()
+	//- +sQ()
+	//- +sContact()
+	+footer()
+

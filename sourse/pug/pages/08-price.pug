@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/sCard/_sCard.pug
+include ../blocks/sContactInfo/_sContactInfo.pug
+include ../blocks/sSimilar/_sSimilar.pug
+include ../blocks/sReadMore/_sReadMore.pug
+include ../blocks/sAdvantageBlock/_sAdvantageBlock.pug
+include ../blocks/sCardBody/_sCardBody.pug
+include ../blocks/sPrices/_sPrices.pug
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '4.jpg'
+
+block title
+	- let  title= 'Прайс-лист'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	//- +headerBlock()
+	//- +sContact()
+	+mob-mnu()
+	+header()
+	+page-body('', title, title)
+		+sPrices
+	+footer()
+

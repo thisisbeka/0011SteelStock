@@ -18,25 +18,32 @@ mixin sCatalog(data)
 mixin sCatalog2(data)
 	// start sCatalog2
 	+b.sCatalog2.section#sCatalog2&attributes(attributes)
-		.container
-			+form-wrap
-				+CheckButtons()
+		.container 
 			.row
-				+card-item2('2','col-md-4 col-6')
-				+card-item2('3','col-md-4 col-6','Двигатель 740.11 (740.11- 1000400)')
-				+card-item2('1','col-md-4 col-6')
-				+card-item2('1','col-md-4 col-6')
-				+card-item2('2','col-md-4 col-6')
-				+card-item2('3','col-md-4 col-6','Двигатель 740.11 (740.11- 1000400)')
-				+card-item2('3','col-md-4 col-6','Двигатель 740.11 (740.11- 1000400)')
-				+card-item2('1','col-md-4 col-6')
-				+card-item2('2','col-md-4 col-6')
-				+card-item2('1','col-md-4 col-6')
-				+card-item2('2','col-md-4 col-6')
-				+card-item2('3','col-md-4 col-6','Двигатель 740.11 (740.11- 1000400)')
-				+card-item2('3','col-md-4 col-6','Двигатель 740.11 (740.11- 1000400)')
-				+card-item2('1','col-md-4 col-6')
-				+card-item2('2','col-md-4 col-6')
+				+card-item2('1','col-md-4 col-6','Трубный прокат')
+				+card-item2('2','col-md-4 col-6','Листовой прокат')
+				+card-item2('3','col-md-4 col-6','Сортовой прокат')
+				+card-item2('4','col-md-4 col-6','Фасонный прокат')
+				+card-item2('5','col-md-4 col-6','Цветной прокат')
+				+card-item2('6','col-md-4 col-6','Трубопроводная арматура')
+				+card-item2('7','col-md-4 col-6','Метизная продукция')
+				+card-item2('8','col-md-4 col-6','Строительные материалы')
+				.col-12
+					+e.btn.btn-light.animation-rotate
+						+icon('refresh')
+						span Показать еще
+				
+	// end sCatalog2
+mixin sCatalog3(data)
+	// start sCatalog2
+	+b.sCatalog2.section#sCatalog2&attributes(attributes)
+		.container 
+			.row
+				+card-item2('1-1','col-md-4 col-6','Труба бесшовная')
+				+card-item2('1-2','col-md-4 col-6','Труба ВГП')
+				+card-item2('1-3','col-md-4 col-6','Труба оцинкованная')
+				+card-item2('1-4','col-md-4 col-6','Труба профильная')
+				+card-item2('1-5','col-md-4 col-6','Труба электросварная') 
 				.col-12
 					+e.btn.btn-light.animation-rotate
 						+icon('refresh')

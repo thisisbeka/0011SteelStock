@@ -1,0 +1,577 @@
+
+<!--list-group-item.list-group-item-action(href='#')--><!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Трубный прокат</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 575 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<style>body.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding:not(.loaded)::before { display: none; }</style>
+	<body class="loaded_hiding main-page" data-bg="02-catalog.jpg">
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none"> 
+				<div class="menu-mobile__inner">
+					<div class="search-block">
+						<form>
+							<input type="text" placeholder="Начать поиск по товарам"/>
+							<button>
+								<svg class="icon icon-search-icon ">
+									<use xlink:href="img/svg/sprite.svg#search-icon"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Для снабженцев</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+					</ul>
+					<div class="header">
+						<div class="header__tel-block col-lg-auto">
+							<div class="tel-n-social"><a class="strong" href="tel:+79308067121">+7 (930) 806-71-21</a>
+								<div class="soc">
+									<a class="soc__item soc__item--telegram" href="#" target="_blank"><img src="img/svg/telegtam.svg" alt=""/>
+									</a>
+									<a class="soc__item soc__item--viber" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+									</a>
+									<a class="soc__item soc__item--whatsapp" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div><a class="text-primary link-modal-js fw-600" href="#modal-request">Заказать звонок</a></div>
+						<a class="header__link-email" href="mailto:skladstali@mail.ru">skladstali@mail.ru
+						</a>
+						<div class="header__addr">г. Нижний Новгород, <br> ул. Вторчермета д.&nbsp;1, оф.&nbsp;113
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col d-xl-none">
+							<a class="header__logo" href="/"><img src="img/svg/logo-head.svg" alt=""/>
+							</a>
+						</div>
+						<div class="col d-none d-xl-block">
+							<div class="header__adress">г. Нижний Новгород, ул. Вторчермета д.&nbsp;1, оф.&nbsp;113
+							</div>
+						</div>
+						<div class="header__col col-lg-auto order-lg-0 order-last">
+							<div class="header__contact-dropdown header__contact-dropdown--js d-lg-block">
+								<div class="container">
+									<div class="row">
+										<div class="col-auto d-none d-xxl-block">
+											<a class="header__link-email" href="mailto:skladstali@mail.ru">skladstali@mail.ru
+											</a>
+										</div>
+										<div class="col">
+											<div class="soc">
+												<a class="soc__item soc__item--telegram" href="#" target="_blank"><img class="d-none d-lg-block" src="img/svg/telegtam-2.svg" alt=""/><img class="d-block d-lg-none" src="img/svg/telegtam.svg" alt=""/><span>Telegtam</span>
+												</a>
+												<a class="soc__item soc__item--viber" href="#" target="_blank"><img class="d-none d-lg-block" src="img/svg/whatsapp-2.svg" alt=""/><img class="d-block d-lg-none" src="img/svg/whatsapp.svg" alt=""/><span>WhatsApp</span>
+												</a>
+												<a class="soc__item soc__item--whatsapp" href="#" target="_blank"><img class="d-none d-lg-block" src="img/svg/viber-2.svg" alt=""/><img class="d-block d-lg-none" src="img/svg/viber.svg" alt=""/><span>Viber</span>
+												</a>
+											</div>
+										</div>
+										<div class="header__tel-block col-lg-auto order-first order-lg-4">
+											<a class="header__link-tel" href="tel:+79308067121">+7 (930) 806-71-21
+											</a>
+										</div>
+										<div class="col-lg-auto d-none d-lg-block order-lg-5">
+											<a class="header__btn btn btn-primary link-modal-js" href="#modal-request">Заказать звонок
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 d-none d-lg-block"></div>
+						<div class="col-lg-auto col d-none d-xl-block">
+							<a class="header__logo" href="/"><img src="img/svg/logo-head.svg" alt=""/>
+							</a>
+						</div>
+						<div class="col d-none d-lg-block">
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Для снабженцев</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="col-auto d-none d-lg-block">
+							<div class="search-block">
+								<form>
+									<input type="text" placeholder="Начать поиск по товарам"/>
+									<button>
+										<svg class="icon icon-search-icon ">
+											<use xlink:href="img/svg/sprite.svg#search-icon"></use>
+										</svg>
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="col-auto d-lg-none">
+							<div class="toggle-contact-mobile toggle-contact-mobile--js btn btn-primary">
+								<svg class="icon icon-call ">
+									<use xlink:href="img/svg/sprite.svg#call"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="col-auto d-lg-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js btn"><span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- end header-->
+			<div class="container container--main">
+				<div class="row row--main">
+					<div class="col-3">
+						<div class="list-block">
+							<div class="list-group">
+											<div class="has-children list-group-item list-group-item-action active"><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-1.webp"/><img src="img/@2x/list-group-1.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Трубный прокат</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Труба бесшовная</a></li>
+													<li><a href="#">Труба оцинкованная</a></li>
+													<li><a href="#">Труба ВГП</a></li>
+													<li><a href="#">Труба профильная</a></li>
+													<li><a href="#">Труба электросварная</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-2.webp"/><img src="img/@2x/list-group-2.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Листовой прокат</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Металлочерепица</a></li>
+													<li><a href="#">Профнастил</a></li>
+													<li><a href="#">Лист рифленый</a></li>
+													<li><a href="#">Лист ПВЛ</a></li>
+													<li><a href="#">Лист холоднокатаный</a></li>
+													<li><a href="#">Лист горячекатанный</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-3.webp"/><img src="img/@2x/list-group-3.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Сортовый прокат</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Катанка</a></li>
+													<li><a href="#">Шестигранник</a></li>
+													<li><a href="#">Полоса</a></li>
+													<li><a href="#">Квадрат</a></li>
+													<li><a href="#">Круг</a></li>
+													<li><a href="#">Арматура</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-4.webp"/><img src="img/@2x/list-group-4.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Фасонный прокат</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Швеллер гнутый</a></li>
+													<li><a href="#">Швеллер</a></li>
+													<li><a href="#">Уголок</a></li>
+													<li><a href="#">Двутавр</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-5.webp"/><img src="img/@2x/list-group-5.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Цветной прокат</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Латунный шестигранник</a></li>
+													<li><a href="#">Латунная труба</a></li>
+													<li><a href="#">Латунная проволока</a></li>
+													<li><a href="#">Латунный лист</a></li>
+													<li><a href="#">Латунная лента</a></li>
+													<li><a href="#">Латунный круг</a></li>
+													<li><a href="#">Медная лента</a></li>
+													<li><a href="#">Медная труба</a></li>
+													<li><a href="#">Медная проволока</a></li>
+													<li><a href="#">Медный лист</a></li>
+													<li><a href="#">Медный круг</a></li>
+													<li><a href="#">Алюминиевая труба</a></li>
+													<li><a href="#">Алюминиевая плита</a></li>
+													<li><a href="#">Алюминиевый лист</a></li>
+													<li><a href="#">Алюминиевый круг</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-6.webp"/><img src="img/@2x/list-group-6.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Трубопроводная арматура</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Балка низколегированная Б1</a></li>
+													<li><a href="#">Сантехизделиятрубопроводная арматура</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-8.webp"/><img src="img/@2x/list-group-8.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Метизная продукция</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Дверная фурнитура</a></li>
+													<li><a href="#">Монтажные детали</a></li>
+													<li><a href="#">Анкеры</a></li>
+													<li><a href="#">Метрический крепеж</a></li>
+													<li><a href="#">Заклепки</a></li>
+													<li><a href="#">Гвозди</a></li>
+													<li><a href="#">Грузовой крепеж</a></li>
+													<li><a href="#">Дюбели, дюбель-гвозди</a></li>
+													<li><a href="#">Шурупы, саморезы</a></li>
+												</ul>
+											</div>
+											<div class="has-children list-group-item list-group-item-action "><a href="#">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/list-group-8.webp"/><img src="img/@2x/list-group-8.jpg" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--><span>Строительные материалы</span></a>
+												<ul class="sub-menu">
+													<li><a href="#">Изоляционные материалы</a></li>
+													<li><a href="#">Гидроизоляция</a></li>
+													<li><a href="#">Строительные смеси и грунты</a></li>
+													<li><a href="#">Строительство стен  и&amp;nbsp;перегородок</a></li>
+													<li><a href="#">ЛКМ, пены, герметики</a></li>
+												</ul>
+											</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-9 col--ph">
+						<div class="page-head">
+							<div class="container">
+								<nav class="swiper-container breadcrumb-slider--js" aria-label="breadcrumb">
+									<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+										<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+												<meta itemprop="position" content="1"/></a></li>
+										<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог</span>
+												<meta itemprop="position" content="2"/></a></li>
+										<li class="swiper-slide breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Трубный прокат</span>
+												<meta itemprop="position" content="3"/></a></li>
+									</ol>
+								</nav>
+								<div class="row">
+									<div class="col">
+										<h1>Трубный прокат</h1>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- start sCatalog2-->
+						<div class="sCatalog2 section" id="sCatalog2">
+							<div class="container"> 
+								<div class="row">
+									<div class="col-md-4 col-6">
+										<a class="card-item bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/catalog-1-1.webp"/><img class="object-fit-js" src="img/@2x/catalog-1-1.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="card-item__caption">
+												<div class="card-item__title">Труба бесшовная
+												</div>
+												<div class="card-item__btn-wrap">
+													<div class="card-item__btn btn-js">Подробнее
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-4 col-6">
+										<a class="card-item bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/catalog-1-2.webp"/><img class="object-fit-js" src="img/@2x/catalog-1-2.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="card-item__caption">
+												<div class="card-item__title">Труба ВГП
+												</div>
+												<div class="card-item__btn-wrap">
+													<div class="card-item__btn btn-js">Подробнее
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-4 col-6">
+										<a class="card-item bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/catalog-1-3.webp"/><img class="object-fit-js" src="img/@2x/catalog-1-3.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="card-item__caption">
+												<div class="card-item__title">Труба оцинкованная
+												</div>
+												<div class="card-item__btn-wrap">
+													<div class="card-item__btn btn-js">Подробнее
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-4 col-6">
+										<a class="card-item bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/catalog-1-4.webp"/><img class="object-fit-js" src="img/@2x/catalog-1-4.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="card-item__caption">
+												<div class="card-item__title">Труба профильная
+												</div>
+												<div class="card-item__btn-wrap">
+													<div class="card-item__btn btn-js">Подробнее
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-md-4 col-6">
+										<a class="card-item bg-wrap" href="#">
+											<!-- picture-->
+											<picture class="picture-bg"> 
+												<source type="image/webp" srcset="img/@2x/webp/catalog-1-5.webp"/><img class="object-fit-js" src="img/@2x/catalog-1-5.png" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture-->
+											<div class="card-item__caption">
+												<div class="card-item__title">Труба электросварная
+												</div>
+												<div class="card-item__btn-wrap">
+													<div class="card-item__btn btn-js">Подробнее
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-12">
+										<div class="sCatalog2__btn btn-light animation-rotate">
+											<svg class="icon icon-refresh ">
+												<use xlink:href="img/svg/sprite.svg#refresh"></use>
+											</svg><span>Показать еще</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end sCatalog2-->
+						<div class="sContent section pb-0">
+							<p>Какой дом, помещение или офис обходится без качественной канализации, водопровода или отопления? Монтаж любого водопровода начинается с&nbsp;выбора качественных труб. Одним из&nbsp;популярных и&nbsp;прочных материалов является сталь.</p>
+							<p>Стальные трубы надежный и&nbsp;дешевый материал. Многолетний опыт показывает высокий уровень их&nbsp;прочности и&nbsp;жесткости. Срок их&nbsp;службы 30-40&nbsp;лет. Прекрасно служат при строительстве любых опорных конструкций. Достоинством таких изделий выступает теплопроводность, герметичность и&nbsp;простота в&nbsp;использовании, ремонте и&nbsp;реконструкции.</p>
+							<p>Наши стальные трубы необходимы для качественной прокладки водопроводных, канализационных и&nbsp;транспортных коммуникаций. Так&nbsp;же трубы понадобятся при возведении конструкций, в&nbsp;качестве опоры. Например: заборы, стены, мосты и&nbsp;другие.</p>
+							<p>Все наши изделия сертифицированы и&nbsp;производятся по&nbsp;ГОСТу. Документация находится в&nbsp;свободном доступе на&nbsp;сайте.</p>
+							<p>Благодаря разным видам и&nbsp;размерам, мы&nbsp;поможем подобрать необходимый вариант, который подойдёт именно вам и&nbsp;вашим условиям окружающей среды.</p>
+							<p>Заказать стальные трубы вы&nbsp;можете на&nbsp;нашем сайте или позвонив по&nbsp;телефону.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="footer__body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-auto col-xl-3 order-md-4">
+								<a class="footer__logo d-block d-md-none" href="/"><img src="img/svg/logo.svg" alt=""/>
+								</a>
+								<ul class="footer__contacts">
+									<li class="tel-n-social"><a class="strong" href="tel:+79308067171">+7 (930) 806-71-71</a>
+										<div class="soc">
+											<a class="soc__item soc__item--telegram" href="#" target="_blank"><img src="img/svg/telegtam.svg" alt=""/>
+											</a>
+											<a class="soc__item soc__item--viber" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+											</a>
+											<a class="soc__item soc__item--whatsapp" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+											</a>
+										</div>
+									</li>
+									<li><a class="link-modal-js" href="#modal-request">Заказать звонок</a></li>
+									<li><a class="link-secondary2" href="mailto:skladstali@mail.ru">skladstali@mail.ru</a></li><li>
+									<button class="footer__btn btn d-none d-lg-inline-block"><span>Наверх</span><img src="img/svg/mouse.svg" alt=""/>
+									</button></li>
+								</ul>
+							</div>
+							<div class="col order-md-3">
+								<div class="footer__location">
+									<div class="footer__adress text-white">г. Нижний Новгород, ул.&nbsp;Вторчермета д.&nbsp;1, офис&nbsp;113
+									</div>
+									<div class="footer__social d-none d-lg-block">
+										<div class="footer__social-title">Мы&nbsp;в&nbsp;социальных сетях:
+										</div>
+										<div class="soc">
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="icon icon-footer-fb ">
+													<use xlink:href="img/svg/sprite.svg#footer-fb"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="icon icon-footer-vk ">
+													<use xlink:href="img/svg/sprite.svg#footer-vk"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="icon icon-footer-instagram ">
+													<use xlink:href="img/svg/sprite.svg#footer-instagram"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="icon icon-footer-ok ">
+													<use xlink:href="img/svg/sprite.svg#footer-ok"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-auto order-md-1">
+								<a class="footer__logo d-none d-md-block" href="/"><img src="img/svg/logo.svg" alt=""/>
+								</a>
+								<ul class="footer__legal">
+									<li>ОГРН 1171690041234</li>
+									<li>ИНН 1650341234</li>
+									<li>КПП 165001234</li>
+								</ul>
+							</div>
+							<div class="col col-xl-3 d-none d-lg-block order-md-2">
+								<nav class="footer__menu">
+									<ul>
+										<li><a class="link-white" href="#">Главная</a></li>
+										<li><a class="link-white" href="#">Каталог</a></li>
+										<li><a class="link-white" href="#">Прайс-лист</a></li>
+										<li><a class="link-white" href="#">Услуги</a></li>
+										<li><a class="link-white" href="#">О&nbsp;компании</a></li>
+										<li><a class="link-white" href="#">Контакты</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__info">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg">
+								<div class="footer__copyright text-white">© ООО «СтальСклад» 2021
+								</div>
+							</div>
+							<div class="col-12 col-lg-auto text-center">
+								<a class="footer__policy link-secondary2" href="#">Политика обработки персональных данных
+								</a>
+							</div>
+							<div class="col-12 col-lg">
+								<div class="footer__developer">Создание сайта – <a class="link-white" href="#">AD HEADS</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win short-modal" id="modal-gratitude" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<h2>Спасибо за обращение!</h2>
+					<div class="form-wrap__caption">Наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
+					</div>
+					<div class="form-wrap__btn btn btn-primary modal-close-js">Закрыть
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-gratitude-->
+		<div class="modal-win request" id="modal-request" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<h2>Оставить заявку</h2>
+					<div class="form-wrap__caption">Заполните форму, и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
+					</div>
+					<div class="form-input">
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__btn btn btn-primary">Отправить заявку
+						</div>
+					</div>
+					<div class="agreement">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;<a href="#">Условиями</a></span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end modals-->
+		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<script src="libs/fslightbox/index.js"></script>
+		<script src="js/jquery.readall.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c" type="text/javascript"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
