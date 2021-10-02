@@ -1,6 +1,6 @@
 // start .sCard
 .sCard {
-	--sPT: #{rem(30)};
+	--sPT: #{rem(38)};
 	--sPB: #{rem(20)};
 	// --sTPB: ;
 	.container {
@@ -156,7 +156,8 @@
 	}
 	&__price {
 		font-weight: bold;
-		font-size: rem(32);
+		// font-size: rem(32);
+		@include rfs(32px);
 		line-height: (39 / 32);
 		font-weight: bold;
 		margin-bottom: rem(20);
@@ -176,7 +177,7 @@
 			}
 		}
 		.text-secondary {
-			margin-right: rem(20);
+			// margin-right: rem(20);
 			font-weight: 500;
 			@include media-breakpoint-only(md) {
 				font-size: rem(15);
@@ -185,10 +186,17 @@
 	}
 
 	.btn-more {
-		padding: rem(6) 0;
+		padding:   0;
+		border-radius: 0;
 		margin-bottom: rem(10);
 		@include media-breakpoint-only(sm) {
 			font-size: rem(16);
+		}
+		font-weight: 500;
+		border-bottom: 1px dashed;
+		text-decoration: none !important;
+		&:hover{
+			border-color: transparent
 		}
 	}
 

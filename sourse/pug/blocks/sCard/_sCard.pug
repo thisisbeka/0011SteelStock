@@ -4,33 +4,8 @@ mixin sCard(data)
 		.container
 			.row
 				+e.col.col-12.col-md-6.col-auto
-					+e.slider-wrap
-						+e.slider--js.swiper-container
-							.swiper-wrapper
-								mixin slide2(i)
-									+e.slide.swiper-slide
-										+e.img-wrap(href=`img/card-${i}.jpg` data-fslightbox= "sCard-gallery")
-											img(src=`img/card-md-1.jpg` alt='')
-								+slide2(1)
-								+slide2(2)
-								+slide2(3)
-								+slide2(4)
-								+slide2(3)
-								+slide2(2)
-								+slide2(4)
-						+e.slider-thumbs--js.swiper-container
-							.swiper-wrapper
-								mixin slide(i)
-									+e.slide.swiper-slide
-										+e.img-wrap
-											img(src=`img/card-sm-${i}.jpg` alt='')
-								+slide(1)
-								+slide(2)
-								+slide(3)
-								+slide(4)
-								+slide(3)
-								+slide(2)
-								+slide(4)
+					+e.img-wrap()
+						+pic('card.jpg')
 					+e.contact--lg-only
 						.text-secondary Свяжитесь с&nbsp;нами в&nbsp;мессенджерах и&nbsp;мы&nbsp;проконсультируем вас:
 						+b.soc
@@ -41,40 +16,25 @@ mixin sCard(data)
 							+item-sos
 								img(src="img/svg/whatsapp.svg" alt="")
 				.col-12.col-md-6.col-lg
-					+e.table
-						mixin row-item(t, v)
-							+e.row-item
-								.row
-									.col-6
-										span!= t
-									.col-6
-										span!= v
-						+row-item(`Модель двигателя:`, `740.11 (740.11-1000400)`)
-						+row-item(`Экологический класс:`, `Евро 1`)
-						+row-item(`Мощность двигателя:`, `240 л/с`)
-						+row-item(`Топливная аппаратура:`, `ЯЗДА 337.1111005-42.08`)
-						+row-item(`Турбокомпрессоры:`, `ТКР 7H1`)
-						+row-item(`Экологический класс:`, `Евро 1`)
-						+row-item(`Комплектность двигателя:`, `ТНВД, турбокомпрессоры, воздушный компрессор, насос ГУР, генератор, кулиса КПП`)
-						+row-item(`Применяемость с КПП:`, `14, 142, 15, 152`)
-						+row-item(`Привод вентилятора:`, `Гидромуфта`)
-					BUTTON.btn-more.d-xl-none Показать еще
+					p Труба водогазопроводная или труба ВГП относится к трубному прокату, который используется для организации систем водоснабжения, устройства систем газоснабжения и санитарно-технических систем. Газо- и водонепроницаемость трубы обеспечивает надежный сварочный шов, который проходит испытания на соответствие требованиям ГОСТ 3262-75.
+					BUTTON.btn-more Подробное описание
 					+e.price Цена: от 110 000 ₽
 					+e.buttons
 						.row
 							.col-6.col-lg-12.col-xl-6
 								+e.btn.btn.btn-primary Оставить заявку
-							.col-6.col-lg-12.col-xl-6
-								+e.btn.btn.btn-outline-primary 
-									+icon('basket')
-									| В корзину
-					+e.contact
-						.text-secondary Свяжитесь с&nbsp;нами в&nbsp;мессенджерах и&nbsp;мы&nbsp;проконсультируем вас:
-						+b.soc
-							+item-sos
-								img(src="img/svg/telegtam.svg" alt="")
-							+item-sos
-								img(src="img/svg/viber.svg" alt="")
-							+item-sos
-								img(src="img/svg/whatsapp.svg" alt="")
+							//- .col-6.col-lg-12.col-xl-6
+							//- 	+e.btn.btn.btn-outline-primary 
+							//- 		+icon('basket')
+							//- 		| В корзину
+					+e.contact.row
+						.col-auto
+							+b.soc
+								+item-sos
+									img(src="img/svg/telegtam.svg" alt="")
+								+item-sos
+									img(src="img/svg/viber.svg" alt="")
+								+item-sos
+									img(src="img/svg/whatsapp.svg" alt="")
+						.col.text-secondary Свяжитесь с&nbsp;нами в&nbsp;мессенджерах и&nbsp;мы&nbsp;проконсультируем вас:
 	// end sCard
