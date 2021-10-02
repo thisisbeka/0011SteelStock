@@ -23,7 +23,7 @@
 	a {
 		display: block;
 		@include media-breakpoint-up(lg) {
-			padding: rem(28) calc(var(--bs-gutter-x) / 2);
+			padding: rem(27) calc(var(--bs-gutter-x) / 2);
 		}
 		padding: rem(15) 15px;
 		font-weight: 600;
