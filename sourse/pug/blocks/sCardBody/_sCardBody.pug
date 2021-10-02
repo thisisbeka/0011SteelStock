@@ -9,7 +9,7 @@ mixin sCardBody(data)
 					.tabs__btn ГОСТы
 					.tabs__btn Сертификаты
 				.tabs__wrap
-					.tabs__content
+					.tabs__content.active
 						+b.price-table
 							table
 								thead
@@ -61,6 +61,9 @@ mixin sCardBody(data)
 						p Электросварные трубы выпускаются с&nbsp;разными диаметрами и&nbsp;толщиной стенок, от&nbsp;этих показателей определяется сфера, в&nbsp;которой они будут применяться.
 
 						p Заказать электросварные трубы на&nbsp;нашем складе, вы&nbsp;можете позвонив по&nbsp;номеру телефона или приехав в&nbsp;офис. Актуальность цены уточняйте у&nbsp;менеджера.
-					.tabs__content.active 3
-					.tabs__content 4
+					.tabs__content
+						block
+					.tabs__content
+						block
+
 	// end sCardBody

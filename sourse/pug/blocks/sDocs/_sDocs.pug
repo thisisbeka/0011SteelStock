@@ -1,0 +1,17 @@
+mixin sDocs(h2)
+	// start sDocs
+	+b.sDocs.section#sDocs&attributes(attributes)
+		.container
+			if h2
+				+b.section-title.text-center
+					h2 sDocs
+				
+			.row 
+				- for (var x = 0; x < 6; x++)
+					+e.col.col-lg-4.col-6
+						+e.item(href="#")
+							img(src="img/svg/doc.svg" loading="lazy", alt="")
+							div
+								+e.title Название файла.pdf
+								+e.size 1 мб
+	// end sDocs

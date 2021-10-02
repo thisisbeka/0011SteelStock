@@ -14,6 +14,7 @@ include ../blocks/sSimilar/_sSimilar.pug
 include ../blocks/sReadMore/_sReadMore.pug
 include ../blocks/sAdvantageBlock/_sAdvantageBlock.pug
 include ../blocks/sCardBody/_sCardBody.pug
+include ../blocks/sDocs/_sDocs.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= '4.jpg'
@@ -34,6 +35,7 @@ block pagecontent
 		+sCard()
 		+sAdvantageBlock('emptyTitle')
 		+sCardBody
+			+sDocs
 		//- +b.sCardLink.py-2
 		//- 	h4.strong.mb-3  Дополнительные модификации
 		//- 	.list-group

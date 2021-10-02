@@ -1,0 +1,27 @@
+mixin sRequisites(data)
+	// start sRequisites
+	+b.sRequisites#sRequisites&attributes(attributes)
+		+e.head
+			h4 Реквизиты организации
+			a.pdf-btns(href="#")
+				img(src="img/svg/pdf.svg")
+				span Скачать PDF
+		+e.table
+			table
+				mixin tr-string(f,s)
+					tr
+						td.first!=f
+						td.second!=s
+				+tr-string(`Название организации`,`ООО &laquo;СтальСклад&raquo;`)
+				+tr-string(`ОГРН`,`1234567890`)
+				+tr-string(`ИНН`,`1234567890`)
+				+tr-string(`КПП`,`1234567890`)
+				+tr-string(`Юридический адрес`,`423000, г. Нижний Новогород, пр-т. Мира, д.&nbsp;10, оф.&nbsp;10`)
+				+tr-string(`Почтовый адрес`,`423000, г. Нижний Новогород, пр-т. Мира, д.&nbsp;10, оф.&nbsp;10`)
+				+tr-string(`Расчетный счет`,`12345678901234567890`)
+				+tr-string(`Корреспондентский счет`,`12345678901234567890`)
+				+tr-string(`Банк`,`ФИЛИАЛ &laquo;НИЖЕГОРОДСКИЙ&raquo; АО&nbsp;&laquo;АЛЬФА-БАНК&raquo;`)
+				+tr-string(`БИК`,`1234567890`)
+				+tr-string(`Директор`,`Иванов Иван Иванович (на&nbsp;основании устава)`)
+				+tr-string(`Телефон`,`8 (800) 555-35-35`)
+	// end sRequisites

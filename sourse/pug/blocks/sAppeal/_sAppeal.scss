@@ -1,0 +1,42 @@
+// start .sAppeal
+.sAppeal {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	padding: rem(40);
+	background-color: #F5F7F9;
+	width: 100%;
+	border-radius: 5px;
+	&__logo {
+		position: relative;
+		padding-right: 10px;
+		width: 90px;
+		height: 100%;
+		img {
+			@include a-cent(y);
+			width: 80px;
+			height: auto;
+		}
+	}
+	&__title {
+		font-weight: 600;
+	}
+	&__respect {
+		padding-top: rem(12);
+		font-size: rem(14);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAppeal
