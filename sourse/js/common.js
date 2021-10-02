@@ -451,6 +451,13 @@ function eventHandler() {
 			$(this).parents(".has-children").toggleClass("active")
 		})
 	})
+	$(".accordion-item__head").click(function(e){
+		e.preventDefault();
+		$(this).next().slideToggle(function(){
+			$(this).parents(".accordion-item--js").toggleClass("active");
+			
+		})
+	})
 
 
 };
