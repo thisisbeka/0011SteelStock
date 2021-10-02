@@ -10,38 +10,7 @@ mixin sCardBody(data)
 					.tabs__btn Сертификаты
 				.tabs__wrap
 					.tabs__content.active
-						+b.price-table
-							table
-								thead
-									tr
-										th Наименование
-										th R1
-										th Длина
-										th Цена
-										th Количество
-								tbody
-									mixin tr(a)
-										tr
-											td
-												div
-													if a
-														a(href="#") Трубы электросварные 16×1 х/к
-													else
-														| Трубы электросварные 16×1 х/к
-											td 18
-											td 6000
-											td 27 ₽
-											td
-												+b.block-add 
-													+e.btn(type="button")
-													input(type="number" value="0")
-													+e.btn--plus(type="button")
-									- for (var x = 0; x < 3; x++)
-										+tr()
-										+tr("a")
-							+e.footer.row
-								+e.text.col-md Всего выбрано товаров: #[span 2]
-								+e.btn.col-md-auto(href="#") Оставить заявку
+						+priceblock()
 								
 					.tabs__content
 						p При изготовлении электросварной трубы, в основе берут заготовку – стальную полосу, сгибают на специальном оборудовании, а края соединяют при помощи электросварки.
