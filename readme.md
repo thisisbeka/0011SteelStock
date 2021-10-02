@@ -5,6 +5,7 @@
 5. <https://maxsimakov.github.io/0011SteelStock/public/05-shop-cart.html>
 6. <https://maxsimakov.github.io/0011SteelStock/public/06-contacts.html>
 7. <https://maxsimakov.github.io/0011SteelStock/public/07-delivery.html>
+7. <https://maxsimakov.github.io/0011SteelStock/public/07-typography.html>
 8. <https://maxsimakov.github.io/0011SteelStock/public/08-print.html>
 9. <https://maxsimakov.github.io/0011SteelStock/public/404.html>
 10. <https://maxsimakov.github.io/0011SteelStock/public/000-modal.html>

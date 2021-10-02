@@ -80,7 +80,7 @@
 		width: 100%;
 		@include media-breakpoint-up(md) {
 			left: calc(var(--bs-gutter-x) / 2);
-			width: 50vw;
+			width: calc(50vw - var(--bs-gutter-x) / 2);
 			height: 100%;
 		}
 	}
