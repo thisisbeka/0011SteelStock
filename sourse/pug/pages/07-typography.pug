@@ -9,6 +9,7 @@ include ../blocks/sRequisites/_sRequisites.pug
 include ../blocks/sGal/_sGal.pug
 include ../blocks/sAccordeon/_sAccordeon.pug
 //- include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sDocs/_sDocs.pug
 //- include ../blocks/sQ/_sQ.pug
 
 block variables
@@ -28,12 +29,26 @@ block pagecontent
 	+header()
 	+page-body06('btns','Типовая страница', title)
 		+sContent()
-			+sAppeal()
 			+e.map
 				h4 Расположение на карте
-				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c' type='text/javascript')
 				+e.map-widget#map
+			+sAppeal()
 			+sRequisites()
+			h4 Маркированный список
+			ul
+				li прочность металла&nbsp;&mdash; устойчив к&nbsp;механическим повреждениям;
+				li большой спектр использования&nbsp;&mdash; универсальность;
+				li долговечность (30&ndash;50 лет эксплуатации);
+				li не&nbsp;портятся под влиянием ультрафиолета;
+				li прекрасно переносят высокие и&nbsp;низкие температуры.
+			h4 Нумерованный список
+			ol
+				li прочность металла&nbsp;&mdash; устойчив к&nbsp;механическим повреждениям;
+				li большой спектр использования&nbsp;&mdash; универсальность;
+				li долговечность (30&ndash;50 лет эксплуатации);
+				li не&nbsp;портятся под влиянием ультрафиолета;
+				li прекрасно переносят высокие и&nbsp;низкие температуры.
+			+sDocs(`Файлы`)
 			+sAdvantageBlock()
 			+sFeedbackForm()
 			+sGal
