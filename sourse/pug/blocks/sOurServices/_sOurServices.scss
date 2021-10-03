@@ -6,6 +6,7 @@
 	background-color: #f5f7f9;
 	.adv-item {
 		@include mt;
+		display: block;
 		text-align: center;
 		background-color: $white;
 		border: 1px solid $light2;
