@@ -100,14 +100,14 @@ mixin listAside()
 		.list-block
 			.list-group
 				mixin item(i, t, a, ...items)
-					div.has-children(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
+					div.has-children(class!= ('list-group-item list-group-item-action active'+ a || 'list-group-item list-group-item-action' ))
 						a(href="#")
 							+pic(`list-group-${i}.jpg`, '', 0)
 							span!= t
 						ul.sub-menu
 							each item in items
 								li: a(href="#")= item 
-				+item(1,'Трубный прокат','active','Труба бесшовная','Труба оцинкованная','Труба ВГП','Труба профильная','Труба электросварная')
+				+item(1,'Трубный прокат','','Труба бесшовная','Труба оцинкованная','Труба ВГП','Труба профильная','Труба электросварная')
 				+item(2,`Листовой прокат`, ``,'Металлочерепица','Профнастил','Лист рифленый','Лист ПВЛ','Лист холоднокатаный','Лист горячекатанный')
 				+item(3,'Сортовый прокат', ``,'Катанка','Шестигранник','Полоса','Квадрат','Круг','Арматура')
 				+item(4,'Фасонный прокат', ``,'Швеллер гнутый','Швеллер','Уголок','Двутавр')
@@ -170,7 +170,7 @@ mixin page-body04(btns,t, ...items)
 										div
 											.span-mail По всем вопросам
 											a.strong(href=`mailto:skladstali@mail.ru`) skladstali@mail.ru
-						button.btn.btn-primary(type="button") Оставить заявку
+						a.btn.btn-primary.link-modal-js(href="#modal-request") Оставить заявку
 
 mixin page-body05(btns,t, ...items)
 	.container.container--main
@@ -483,4 +483,4 @@ mixin priceblock(page)
 						+tr("a")
 		+e.footer.row
 			+e.text.col-md Всего выбрано товаров: #[span 2]
-			+e.btn.col-md-auto(href="#") Оставить заявку
+			+e.btn.col-md-auto.link-modal-js(href="#modal-request") Оставить заявку

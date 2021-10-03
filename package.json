@@ -51,14 +51,14 @@
     "postcss-combine-media-query": "^1.0.1",
     "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0",
+    "hc-sticky": "^2.2.7",
+    "loading-attribute-polyfill": "^1.5.4",
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.0-beta.0",
-    "hc-sticky": "^2.2.7",
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
-    "loading-attribute-polyfill": "^1.5.4",
     "fslightbox": "^3.3.0",
     "animate.css": "^4.1.1",
     "swiper": "^6.8.0",

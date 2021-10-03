@@ -66,14 +66,14 @@
 	
 	&__img-wrap {
 		@include block;
-		@include mt;
+		// @include mt;
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(30);
 		}
 		border-radius: $border-radius;
 		overflow: hidden;
 		background-color: $light;
-		cursor: pointer;
+		// cursor: pointer;
 		z-index: 5;
 		img {
 			// @extend .object-fit-js;

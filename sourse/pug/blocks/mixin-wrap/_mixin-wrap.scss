@@ -313,6 +313,13 @@
 			transform: rotateX(180deg);
 		}
 	}
+	ul{
+		a{
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
 		&>a {
 			display: flex;
 			align-items: center;
@@ -450,7 +457,7 @@
 }
 .page-body04 {
 	padding-top: 32px;
-	a {
+	a:not(.btn) {
 		color: $body-color;
 	}
 	.row--search {
@@ -584,7 +591,10 @@
 			font-size: rem(50);
 			color: $primary;
 		}
-		button {
+		.row{
+			--bs-gutter-y: 0;
+		}
+		.btn {
 			margin-top: rem(20);
 			padding-left: rem(29);
 			padding-right: rem(29);
@@ -1013,7 +1023,7 @@
 		&:hover {
 			.icon {
 				@include media-breakpoint-up(lg) {
-					color: $secondary;
+					// color: $secondary;
 				}
 			}
 		}

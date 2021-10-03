@@ -36,6 +36,19 @@
 } // end.sCardBody
 
 .price-table{
+	position: relative;
+	@include media-breakpoint-up(lg) {
+
+		tr:hover{
+			td{
+				background-color: #f6f7f9;
+				// border-color: rgba($color: #E5E8EC, $alpha: .1);
+			}
+		}
+		}
+	td{
+		@include mt;
+	}
 	table{
 		width: 100%;
 		td,th{
@@ -72,14 +85,9 @@
 			}
 		}
 		a{
-			border-bottom: 1px solid;
-			text-decoration: none !important;
-			color: $primary !important;		
-			&:hover{
-				// color: $primary;		
-				color: #2e75a9 !important;
-				border-color: transparent;
-			}
+			// border-bottom: 1px solid;
+			// text-decoration: none !important;
+			@extend .tdu;
 		}
 		tbody{
 			td{
@@ -162,7 +170,10 @@
 		box-shadow: 0px -5px 25px rgba(51, 56, 67, 0.15);
 		--bs-gutter-x: 0 !important;
 		align-items: center;
-		
+		position: sticky;
+		bottom: 0;
+		width: 100%;
+		left: 0;
 		span{
 			color: $primary;
 			margin-left: rem(3);
