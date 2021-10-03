@@ -3,7 +3,8 @@
 	--headerHeight: 45px;
 	z-index: 1000;
 	background-color: $white;
-	position: relative;
+	position: sticky;
+	top: 0;
 	// margin-right: calc(-1 * var(--spacing-end));
 	padding-top: rem(15);
 	padding-bottom: rem(15);

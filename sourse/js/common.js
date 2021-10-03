@@ -232,7 +232,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
-	// JSCCommon.heightwindow();
+	JSCCommon.heightwindow();
 	JSCCommon.toggleShow(".toggle-contact-mobile--js", '.header__contact-dropdown--js');
 	// JSCCommon.animateScroll();
 	
@@ -431,15 +431,28 @@ function eventHandler() {
 		}, 3000);
 	});
 
-	var Sticky = new hcSticky('.list-block', {
-		stickTo: '.container--main',
-		top:20
-	});
+	// var Sticky = new hcSticky('.list-block', {
+	// 	stickTo: '.container--main',
+	// 	top:20
+	// });
 
-	var Sticky2 = new hcSticky('.page-body04__help', {
-		stickTo: '.page-body04 .col--help',
-		top:20,
-	});
+
+
+	// var StickyHeader = new hcSticky('.header', {
+	// 	stickTo: 'body',
+	// 	// top:20
+	// });
+
+
+
+	// var Sticky2 = new hcSticky('.page-body04__help', {
+	// 	stickTo: '.page-body04 .col--help',
+	// 	top:20,
+	// });
+	// var Sticky3 = new hcSticky('.price-table__footer', {
+	// 	stickTo: '.price-table',
+	// 	top:70,
+	// });
 
 	$('.btn-close-js').click(function(){
 		$(this).parent().find('.input-search').val(" ");
@@ -449,6 +462,7 @@ function eventHandler() {
 		e.preventDefault();
 		$(this).next().slideToggle(function(){
 			$(this).parents(".has-children").toggleClass("active")
+			Sticky.update();
 		})
 	})
 	$(".accordion-item__head").click(function(e){
