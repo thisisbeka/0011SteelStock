@@ -141,14 +141,25 @@
 		span {
 			margin-right: rem(10);
 		}
-		img {
+
+		svg {
 			width: rem(27);
 			height: rem(40);
+			color: $white;
+			rect {
+				@include mt;
+				stroke: currentColor;
+				opacity: 0.2;
+			}
 		}
 		@include media-breakpoint-up(lg) {
 			&:hover {
-				color: #c4c4c4;
-				opacity: 0.85;
+				color: $white;
+				svg {
+					rect {
+						opacity: 1;
+					}
+				}
 			}
 		}
 	}

@@ -7,7 +7,7 @@ mixin sOurServices(data)
 			.row
 				mixin adv-item(s,t)
 					.col-md-4
-						+b.adv-item
+						+b.adv-item(href="#")
 							+e.img-wrap
 								img.res-i(src=`img/svg/our-services-${s}.svg`, loading='lazy' alt="")
 							+e.title!=t
