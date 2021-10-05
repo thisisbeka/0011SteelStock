@@ -452,8 +452,7 @@ function eventHandler() {
 	$(".has-children> a").click(function (e) {
 		e.preventDefault();
 		$(this).next().slideToggle(function () {
-			$(this).parents(".has-children").toggleClass("active");
-			Sticky.update();
+			$(this).parents(".has-children").toggleClass("active"); // Sticky.update();
 		});
 	});
 	$(".accordion-item__head").click(function (e) {

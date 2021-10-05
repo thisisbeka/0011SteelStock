@@ -1,6 +1,9 @@
 .menu {
+	@include media-breakpoint-up(xxl) {
+		--bs-gutter-x: 20px
+	}
 	@include media-breakpoint-up(lg) {
-		@include roww(20px);
+		@include roww(18px);
 		text-align: center;
 		display: flex;
 	}

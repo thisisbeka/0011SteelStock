@@ -23,3 +23,7 @@ block pagecontent
 			a.btn.btn-primary.m-2.link-modal-js(href=a  )= t 
 		+btn("Заявка",'#modal-request')
 		+btn("Благодарка",'#modal-gratitude')
+
+	+b.modal-cookies(class=" " id="modal-cookies")
+		+e.caption!=`Мы используем файлы cookie. Подробнее - в нашей <a href='#'>политике об обработке персональных данных</a>`
+		+e.btn(href="#") Понятно
