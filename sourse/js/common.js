@@ -480,28 +480,26 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-sessionStorage.setItem('key', 1);
-// Получение данных из sessionStorage
-var data = sessionStorage.getItem('key'); 
-// document.body.classList.add('loaded_hiding');
+
+document.body.classList.add('loaded');
+var wow = new WOW({
+	mobile: false,
+	animateClass: 'animate__animated'
+});
 
 window.onload = function () {
 	if (!sessionStorage.getItem('key') == 1) {
-
 		window.setTimeout(function () {
-			document.body.classList.add('loaded');
-			var wow = new WOW({
-				mobile: false,
-				animateClass: 'animate__animated',
-			});
 			wow.init();
 		}, 500);
 		sessionStorage.setItem('key', 1);
 		console.log(1);
 	}
-}
+};
+
 if (sessionStorage.getItem('key') == 1) {
 	document.body.classList.remove('loaded_hiding');
+	wow.init();
 	console.log(0);
 }
 

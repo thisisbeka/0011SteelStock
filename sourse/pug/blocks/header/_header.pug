@@ -16,17 +16,14 @@ mixin header()
 									+e.link-email(href="mailto:skladstali@mail.ru") skladstali@mail.ru
 								.col
 									+b.soc
-										+item-sos().--telegram
-											img.d-none.d-lg-block(src="img/svg/telegram-2.svg" alt="")
-											img.d-block.d-lg-none(src="img/svg/telegram.svg" alt="")
+										+item-sos()
+											img(src="img/svg/telegram-2.svg" alt="") 
 											span Telegram
-										+item-sos().--viber
-											img.d-none.d-lg-block(src="img/svg/whatsapp-2.svg" alt="")
-											img.d-block.d-lg-none(src="img/svg/whatsapp.svg" alt="")
+										+item-sos()
+											img(src="img/svg/whatsapp-2.svg" alt="") 
 											span WhatsApp
-										+item-sos().--whatsapp
-											img.d-none.d-lg-block(src="img/svg/viber-2.svg" alt="")
-											img.d-block.d-lg-none(src="img/svg/viber.svg" alt="")
+										+item-sos()
+											img(src="img/svg/viber-2.svg" alt="") 
 											span Viber
 								+e.tel-block.col-lg-auto.order-first.order-lg-4
 									+e.link-tel(href="tel:+79308067121") +7 (930) 806-71-21
